@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CODEBRIDGE｜制作実績 — Youhei</title>
+<meta name="description" content="オンラインITスクールのランディングページ。給付金の対象可否まで判定する受講料シミュレーターを実装しました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">オンラインITスクール／ 静的ランディングページ</p>
+    <h1 class="work-head__title">CODEBRIDGE</h1>
+    <p class="work-head__lead">受講料シミュレーターと、おすすめコースを提案する診断ウィザードを組み込んだ1ページ構成です。</p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://codebridge-school-62e7ba38a67e.herokuapp.com/" target="_blank" rel="noopener">実サイトを見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/codebridge-1.jpg" alt="CODEBRIDGEのランディングページ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>紺と紫を基調に、学習の前向きさが伝わる配色にしました。</figcaption>
+    </figure>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>オンラインITスクール／架空のサービスを想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・デザイン・実装</td></tr>
+        <tr><th>使用技術</th><td>HTML ／ CSS（BEM設計）／ JavaScript（ライブラリ不使用）</td></tr>
+        <tr><th>構成</th><td>1ページ（ランディングページ）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>金額の不安を先に解消する</h3>
+      <p>スクールの申し込みで最大の障壁は受講料です。コースと支払い方法、給付金の対象かどうかを選ぶと月々の負担額がその場で出るシミュレーターを置きました。問い合わせる前に判断できることを狙っています。</p>
+
+      <h3>コース選びに迷わせない</h3>
+      <p>「どのコースが自分に合うか分からない」という状態で離脱されないよう、いくつかの質問に答えるとおすすめコースが出る診断を用意しました。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：給付金の対象外コースで補助額が出ていた</p>
+        <p>料金表には「給付金対象外」と明記しているコースなのに、シミュレーターでは補助額が計算されていました。画面上の表記と計算ロジックが食い違っている状態で、実際のサービスなら申し込み後にトラブルになる箇所です。コースごとに対象可否を持たせ、対象外なら補助額をゼロにしたうえでチェック欄自体を選べなくする形に直しました。自分で作ったものでも、表示と計算は別々に確認する必要があると学びました。</p>
+      </div>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="forma.html">次の実績：FORMA &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

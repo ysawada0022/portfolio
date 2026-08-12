@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORMA｜制作実績 — Youhei</title>
+<meta name="description" content="パーソナルジムのランディングページ。料金プランの比較シミュレーターと、スクロールに応じて動く実績表示を実装しました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">パーソナルジム／ 静的ランディングページ</p>
+    <h1 class="work-head__title">FORMA</h1>
+    <p class="work-head__lead">料金プランの比較シミュレーターと、スクロールに応じて数字が動く実績表示を組み込んだ1ページ構成です。</p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://forma-gym-92bfafde767f.herokuapp.com/" target="_blank" rel="noopener">実サイトを見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/forma-1.jpg" alt="FORMAのランディングページ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>白と紺を基調に、清潔感を重視した配色にしました。</figcaption>
+    </figure>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>パーソナルジム／架空の店舗を想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・デザイン・実装</td></tr>
+        <tr><th>使用技術</th><td>HTML ／ CSS（BEM設計）／ JavaScript ／ Swiper</td></tr>
+        <tr><th>構成</th><td>1ページ（ランディングページ）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>ランディングページの順番</h3>
+      <p>1ページで完結させる以上、読む順番がそのまま説得の順番になります。悩みへの共感 → 解決できる根拠 → 実績 → 料金 → よくある不安 → 申し込み、という流れで構成しました。</p>
+
+      <h3>料金を先に見せる</h3>
+      <p>パーソナルジムは高額なため、料金が分からないと問い合わせに至りません。回数と期間を選ぶと総額と月々の負担が出るシミュレーターを置き、「思ったより高い／安い」を先に判断してもらう形にしました。</p>
+
+      <h3>数字を印象づける</h3>
+      <p>実績の数字は、画面に入ったタイミングで0から動いて表示されます。ただ書いてあるより目に留まるためですが、動きを減らす設定にしている環境では動かさないようにしています。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="kotoha-home.html">次の実績：コトハ不動産 &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

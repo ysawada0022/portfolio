@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>そらいろクリニック｜制作実績 — Youhei</title>
+<meta name="description" content="WordPressのフルサイト編集で構築したクリニックサイト。デザインの定義をtheme.jsonに集約し、配色を切り替えるとイラストの色まで追従します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">クリニック（内科・小児科）／ WordPressブロックテーマ</p>
+    <h1 class="work-head__title">そらいろクリニック</h1>
+    <p class="work-head__lead">WordPressのフルサイト編集（FSE）で構築しました。前作がクラシックテーマだったため、あえて技術の軸を変えています。</p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://sorairo-clinic-2d735d481c5a.herokuapp.com/" target="_blank" rel="noopener">実サイトを見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/sorairo-1.jpg" alt="そらいろクリニックのトップページ。明るい待合スペースの写真を使ったヒーロー" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>トップページ。院内の写真とオリジナルのイラストを組み合わせています。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/sorairo-2.jpg" alt="診療科目の一覧ページ。各科を写真のカードで並べている" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>診療科目の一覧。カスタム投稿タイプで管理しています。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>クリニック（内科・小児科・アレルギー科）／架空の医院を想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・デザイン・イラスト制作・実装・公開</td></tr>
+        <tr><th>使用技術</th><td>WordPress（ブロックテーマ／FSE）／ theme.json ／ PHP ／ SVG</td></tr>
+        <tr><th>制作物</th><td>テーマ本体 46ファイル ／ デプロイ用パッケージ</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>クラシックテーマとの作り分け</h3>
+      <p>同じWordPressでも、クラシックテーマとブロックテーマでは作り方がまったく違います。前作のレストランサイトがPHPテンプレートを書く方式だったのに対し、こちらはデザインの定義を <code>theme.json</code> に集約し、ページはブロックを組み合わせて作ります。配色やフォント、余白をコードに直接書いている箇所は、テーマ内に一つもありません。</p>
+
+      <h3>配色を切り替えられる</h3>
+      <p>管理画面から配色を切り替えられるよう、スタイルバリエーションを用意しました。小児科を前面に出す暖色、内科・健診を前面に出す濃紺など、コードを触らずに雰囲気を変えられます。</p>
+
+      <h3>イラストと写真を、役割で使い分ける</h3>
+      <p>最初は挿絵をすべてSVGで描き起こしました。塗りの色にテーマの配色変数を使っているため、<strong>配色を切り替えるとイラストの色も一緒に変わります</strong>。外部ファイルとして読み込むとこの連動ができないため、あえてHTMLに直接埋め込んでいます。</p>
+      <p>ただ、通してみると「実在するクリニックに見えない」という弱点がありました。そこで<strong>信頼に関わる箇所だけを写真に差し替え</strong>ています。医師紹介・院長あいさつ・診療科目・院内の様子がそれにあたります。一方、受診の流れの手順アイコンはイラストのまま残しました。表示幅が84pxしかなく、写真にすると何が写っているか判別できないためです。</p>
+      <p>差し替えは、<code>assets/img/illust/</code> に同じ名前の画像を置くとイラストより優先される仕組みにしました。写真を消せばイラストに戻るため、テンプレート側は一行も変えていません。</p>
+
+      <h3>カスタムフィールドをPHPなしで表示する</h3>
+      <p>医師の役職・専門分野・経歴といった項目は、WordPress 6.5から使えるブロックバインディングという仕組みでテンプレートに差し込んでいます。クラシックテーマなら <code>get_post_meta()</code> を書いていた箇所を、PHPを一行も書かずに実現しています。</p>
+
+      <h3>読み込むCSSを必要な分だけにする</h3>
+      <p>FAQのアコーディオンや診療時間表のCSSは、そのブロックが実際に使われているページでのみ読み込まれるようにしました。使っていないページに不要なCSSを配信しません。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：公開後に「テーマディレクトリが存在しません」</p>
+        <p>既定で付いてくるテーマを削除した構成にしていたため、インストール時にWordPressが存在しないテーマを参照してエラーになりました。既定テーマを明示する設定を追加しましたが、それだけでは既に保存された設定は直らないと分かり、データベース側も修正しています。</p>
+      </div>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：デプロイのたびにCSSとページが消える</p>
+        <p>Herokuではデプロイのたびに公開用フォルダが作り直されるため、その外に置いていたCSSや画像が配信されず、パーマリンク用の設定ファイルも毎回消えていました。ビルド時に自動で配置し直す仕組みを入れて解決しています。この対策は以降の案件にも引き継いでいます。</p>
+      </div>
+
+      <h3>アクセシビリティ</h3>
+      <ul><li>FAQはJavaScriptを使わず、HTMLの機能だけで開閉（キーボード操作にも対応）</li><li>すべてのイラストに代替テキストを設定</li><li>診療時間表は狭い画面で「表の内側だけ」が横スクロールし、ページ全体は動かない</li></ul>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="trattoria-sole.html">次の実績：Trattoria Sole &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

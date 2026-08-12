@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youhei — Web制作ポートフォリオ｜静的サイト・WordPress</title>
+<meta name="description" content="静的サイトからWordPressテーマ開発まで。デザインだけでなく、検索機能やフォームなど「動く仕組み」まで一人で作れるWeb制作者のポートフォリオです。">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://ysawada0022.github.io/portfolio/">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Youhei — Web制作ポートフォリオ">
+<meta property="og:description" content="静的サイトからWordPressテーマ開発まで。制作物はすべて実物を公開し、つくった意図と解いた課題まで書いています。">
+<meta property="og:image" content="https://ysawada0022.github.io/portfolio/assets/img/works/kotoha-1.jpg">
+  <meta property="og:url" content="https://ysawada0022.github.io/portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- ============ header ============ -->
+<header class="header">
+  <div class="l-container header__inner">
+    <!-- ▼ ハンドル名。変更する場合は全ページの .header__logo / .footer__logo / <title> を差し替えてください -->
+    <a class="header__logo" href="index.html">Youhei<span class="header__logo-dot">.</span></a>
+
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#works">制作実績</a></li>
+        <li><a class="nav__link" href="#skills">できること</a></li>
+        <li><a class="nav__link" href="#flow">進め方</a></li>
+        <li><a class="nav__link" href="#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ hero ============ -->
+<section class="hero">
+  <div class="l-container">
+    <p class="hero__label">WEB DEVELOPER / TOKYO</p>
+    <h1 class="hero__title">
+      見た目だけでなく、<br>
+      <span class="hero__accent">動く仕組み</span>まで作ります。
+    </h1>
+    <p class="hero__lead">
+      静的サイトの制作から、WordPressのテーマをゼロから書き起こすところまで対応しています。
+      物件の絞り込み検索や、プラグインに頼らないフォームなど、
+      「デザインの先」で必要になる部分こそ引き受けたいと考えています。
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#works">制作実績を見る</a>
+      <a class="btn btn--ghost" href="#contact">相談してみる</a>
+    </div>
+
+    <!--
+      件数（7件）を前面に出すと、制作会社の実績数と比較されて不利になります。
+      数の多さではなく「作り分けの幅」と「実装の深さ」が伝わる指標に置き換えています。
+    -->
+    <dl class="hero__stats">
+      <div class="hero__stat">
+        <dt>作り分けた構成</dt>
+        <dd><span class="hero__num">6</span>種類</dd>
+      </div>
+      <div class="hero__stat">
+        <dt>実装した機能</dt>
+        <dd><span class="hero__num">9</span>種類</dd>
+      </div>
+      <div class="hero__stat">
+        <dt>使用ページビルダー</dt>
+        <dd><span class="hero__num">0</span></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ works ============ -->
+<section class="section" id="works">
+  <div class="l-container">
+    <div class="section__head">
+      <p class="section__label">WORKS</p>
+      <h2 class="section__title">制作実績</h2>
+      <p class="section__lead">
+        すべて架空の店舗・企業を想定した自主制作です。<strong>7サイトとも実物を公開しており、その場で触っていただけます。</strong>
+        各ページには「何が難しかったか」「どう解いたか」まで書いています。
+      </p>
+    </div>
+
+    <ul class="works">
+
+      <li class="work">
+        <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://kotoha-home-08854418cf80.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="コトハ不動産の実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/kotoha-1.jpg" alt="コトハ不動産の物件検索ページ。左に絞り込み条件、右に物件カードが並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">検索機能</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">不動産（売買）</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/kotoha-home.html">コトハ不動産</a></h3>
+            <p class="work__desc">
+              エリア・種別・価格帯・駅徒歩などを掛け合わせた絞り込み検索。条件をURLで表現し、共有もブラウザバックもできます。
+            </p>
+            <ul class="work__tags">
+              <li>WordPress</li><li>WP_Query</li><li>Ajax</li><li>フォーム</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://kotoha-home-08854418cf80.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://sorairo-clinic-2d735d481c5a.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="そらいろクリニックの実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/sorairo-1.jpg" alt="そらいろクリニックのトップページ。明るい待合スペースの写真を使ったヒーロー" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">ブロックテーマ</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">クリニック（内科・小児科）</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/sorairo-clinic.html">そらいろクリニック</a></h3>
+            <p class="work__desc">
+              WordPressのフルサイト編集で構築。信頼に関わる箇所は写真、手順の説明はイラストと使い分けています。
+            </p>
+            <ul class="work__tags">
+              <li>WordPress</li><li>ブロックテーマ</li><li>theme.json</li><li>SVG</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://sorairo-clinic-2d735d481c5a.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://restaurantwp-9a3c44cade0b.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="Trattoria Soleの実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/trattoria-1.jpg" alt="Trattoria Soleのトップページ。暗い背景に料理写真を大きく配置" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">WordPress</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">レストラン（イタリアン）</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/trattoria-sole.html">Trattoria Sole</a></h3>
+            <p class="work__desc">
+              メニューをカテゴリー別に管理でき、予約フォームの送信内容は管理画面から確認できます。プラグインは使っていません。
+            </p>
+            <ul class="work__tags">
+              <li>WordPress</li><li>カスタム投稿</li><li>予約フォーム</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://restaurantwp-9a3c44cade0b.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://tokiwa-kensetsu-7eba1a8f1f85.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="常盤建設の実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/tokiwa-1.jpg" alt="常盤建設のトップページ。緑を基調としたコーポレートサイト" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">コーポレート</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">建設業（BtoB）</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/tokiwa.html">常盤建設</a></h3>
+            <p class="work__desc">
+              施工実績・採用情報まで含む10ページ構成。取引先と求職者、二種類の来訪者を想定して導線を分けています。
+            </p>
+            <ul class="work__tags">
+              <li>HTML/CSS</li><li>JavaScript</li><li>マルチページ</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://tokiwa-kensetsu-7eba1a8f1f85.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://alto-hair-salon-7a1f4ea6fb49.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="ALTOの実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/alto-1.jpg" alt="ALTOのトップページ。黒背景に大きな見出しの美容室サイト" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">店舗サイト</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">美容室</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/alto.html">ALTO</a></h3>
+            <p class="work__desc">
+              スタイリスト紹介やメニュー表を備えた4ページ構成。写真の見せ方で世界観を作ることを主眼に置きました。
+            </p>
+            <ul class="work__tags">
+              <li>HTML/CSS</li><li>Bootstrap</li><li>Swiper</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://alto-hair-salon-7a1f4ea6fb49.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://codebridge-school-62e7ba38a67e.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="CODEBRIDGEの実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/codebridge-1.jpg" alt="CODEBRIDGEのランディングページ。紺と紫を基調としたスクールLP" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">LP</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">オンラインITスクール</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/codebridge.html">CODEBRIDGE</a></h3>
+            <p class="work__desc">
+              給付金の対象可否まで判定する受講料シミュレーター付き。診断ウィザードで受講コースを提案します。
+            </p>
+            <ul class="work__tags">
+              <li>HTML/CSS</li><li>JavaScript</li><li>シミュレーター</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://codebridge-school-62e7ba38a67e.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://forma-gym-92bfafde767f.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="FORMAの実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/forma-1.jpg" alt="FORMAのランディングページ。パーソナルジムのLP" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">LP</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">パーソナルジム</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/forma.html">FORMA</a></h3>
+            <p class="work__desc">
+              料金プランの比較シミュレーターと、スクロールに応じて数字が動く実績表示を組み込んだ1ページ構成です。
+            </p>
+            <ul class="work__tags">
+              <li>HTML/CSS</li><li>JavaScript</li><li>1ページLP</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://forma-gym-92bfafde767f.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ============ skills ============ -->
+<section class="section section--alt" id="skills">
+  <div class="l-container">
+    <div class="section__head">
+      <p class="section__label">SKILLS</p>
+      <h2 class="section__title">できること</h2>
+    </div>
+
+    <div class="skills">
+      <article class="skill">
+        <h3 class="skill__title">静的サイトの制作</h3>
+        <p class="skill__text">
+          店舗サイト、コーポレートサイト、ランディングページ。デザインから実装まで一人で担当します。
+          スマートフォンでの表示は、実機幅で確認しながら作っています。
+        </p>
+        <ul class="skill__list">
+          <li>HTML / CSS（BEM設計）</li>
+          <li>JavaScript（フレームワーク不使用）</li>
+          <li>レスポンシブ対応</li>
+        </ul>
+      </article>
+
+      <article class="skill">
+        <h3 class="skill__title">WordPressテーマ開発</h3>
+        <p class="skill__text">
+          既製テーマの調整ではなく、テーマをゼロから書き起こします。
+          クラシックテーマとブロックテーマ（FSE）の両方に対応できます。
+        </p>
+        <ul class="skill__list">
+          <li>カスタム投稿タイプ・タクソノミー設計</li>
+          <li>ブロックテーマ / theme.json</li>
+          <li>管理画面の入力欄まわりの作り込み</li>
+        </ul>
+      </article>
+
+      <article class="skill">
+        <h3 class="skill__title">検索・データベース設計</h3>
+        <p class="skill__text">
+          物件検索、求人検索、店舗検索。複数条件の掛け合わせと、選ぶ前に件数が分かる絞り込みUIを実装します。
+          静的サイトでは作れない部分です。
+        </p>
+        <ul class="skill__list">
+          <li>複数条件の絞り込み（AND / OR）</li>
+          <li>Ajaxでの結果更新とURL同期</li>
+          <li>並び替え・ページ送り</li>
+        </ul>
+      </article>
+
+      <article class="skill">
+        <h3 class="skill__title">フォームの実装</h3>
+        <p class="skill__text">
+          プラグインに頼らず、入力チェックとスパム対策まで作ります。
+          エラーで戻ったときに入力が消えないなど、細かい使い勝手も詰めます。
+        </p>
+        <ul class="skill__list">
+          <li>サーバー側での入力チェック</li>
+          <li>スパム対策（プラグイン不使用）</li>
+          <li>送信内容の管理画面での確認</li>
+        </ul>
+      </article>
+
+      <article class="skill">
+        <h3 class="skill__title">公開・運用まわり</h3>
+        <p class="skill__text">
+          サーバーへの配置、独自ドメインの設定、公開後につまずきやすい箇所の対処まで対応します。
+        </p>
+        <ul class="skill__list">
+          <li>レンタルサーバー / クラウドへの公開</li>
+          <li>ステージング環境の用意</li>
+          <li>公開後の修正・追加</li>
+        </ul>
+      </article>
+
+      <article class="skill">
+        <h3 class="skill__title">引き継ぎ・ドキュメント</h3>
+        <p class="skill__text">
+          コードにはなぜそう書いたかを日本語で残し、更新手順書もお渡しします。
+          別の人が引き継げる状態にしてお渡しすることを前提にしています。
+        </p>
+        <ul class="skill__list">
+          <li>更新マニュアルの作成</li>
+          <li>コード内のコメント</li>
+          <li>操作説明（オンライン）</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ flow ============ -->
+<section class="section" id="flow">
+  <div class="l-container">
+    <div class="section__head">
+      <p class="section__label">FLOW</p>
+      <h2 class="section__title">制作の進め方</h2>
+    </div>
+
+    <ol class="flow">
+      <li class="flow__step">
+        <p class="flow__num">01</p>
+        <h3 class="flow__title">ご相談・ヒアリング</h3>
+        <p class="flow__text">
+          何のためのサイトか、誰に見てほしいかをうかがいます。
+          「まだ固まっていない」段階でも構いません。要件を一緒に整理するところから始められます。
+        </p>
+      </li>
+      <li class="flow__step">
+        <p class="flow__num">02</p>
+        <h3 class="flow__title">構成とお見積り</h3>
+        <p class="flow__text">
+          ページ構成と必要な機能を書き出し、金額と期間をお出しします。
+          この段階で「今回は不要」と判断できるものは削ります。
+        </p>
+      </li>
+      <li class="flow__step">
+        <p class="flow__num">03</p>
+        <h3 class="flow__title">デザインと実装</h3>
+        <p class="flow__text">
+          トップページから形にしてお見せします。実際に触れる状態でご確認いただき、
+          修正しながら進めます。
+        </p>
+      </li>
+      <li class="flow__step">
+        <p class="flow__num">04</p>
+        <h3 class="flow__title">確認・公開</h3>
+        <p class="flow__text">
+          公開前の環境でご確認いただき、問題なければ公開します。
+          スマートフォンでの表示や表記の揺れも、この段階で確認します。
+        </p>
+      </li>
+      <li class="flow__step">
+        <p class="flow__num">05</p>
+        <h3 class="flow__title">お引き渡し・その後</h3>
+        <p class="flow__text">
+          更新手順書をお渡しし、操作の説明をします。
+          公開後の修正や追加も承ります。
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section class="section section--alt" id="about">
+  <div class="l-container">
+    <div class="about">
+      <div class="about__body">
+        <p class="section__label">ABOUT</p>
+        <h2 class="section__title">プロフィール</h2>
+
+        <p class="about__text">
+          <!-- ▼ ここはご自身の内容に差し替えてください -->
+          Web制作をしている <strong>Youhei</strong> と申します。
+          普段は別の仕事をしており、Web制作は副業として承っています。
+        </p>
+        <p class="about__text">
+          もともとは見た目を作るところから入りましたが、
+          「更新できない」「問い合わせが来ても気づけない」といった、公開したあとで困る部分に関心が移りました。
+          いまは、デザインと同じくらい<strong>仕組みの部分</strong>を大事にしています。
+        </p>
+        <p class="about__text">
+          掲載している7件はすべて自主制作です。実在の会社ではありませんが、
+          「この業種ならこの機能が要るはず」と考えながら、実際に動くところまで作っています。
+          不具合を見つけて直した過程も、各ページに正直に書いています。
+        </p>
+
+        <dl class="about__meta">
+          <div>
+            <dt>対応できること</dt>
+            <dd>静的サイト制作／WordPressテーマ開発／検索機能・フォームの実装</dd>
+          </div>
+          <div>
+            <dt>使用しないもの</dt>
+            <dd>ページビルダー、有料テーマ（ご希望があれば対応します）</dd>
+          </div>
+          <div>
+            <dt>ご連絡</dt>
+            <dd>GitHubより承ります。2〜3日以内にご返信します</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ contact ============ -->
+<section class="section section--contact" id="contact">
+  <div class="l-container">
+    <div class="section__head">
+      <p class="section__label">CONTACT</p>
+      <h2 class="section__title">お問い合わせ</h2>
+      <p class="section__lead">
+        制作のご相談やご質問は、GitHubからご連絡ください。<br>
+        「何から決めればいいか分からない」という段階でも構いません。
+      </p>
+    </div>
+
+    <div class="contact-links">
+      <a class="btn btn--primary btn--wide" href="https://github.com/ysawada0022" target="_blank" rel="noopener">
+        GitHubプロフィールを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+      </a>
+      <p class="contact-links__note">
+        ※ このサイトは求職・受注のためのポートフォリオです。掲載しているサイトはすべて架空の店舗・企業を想定した自主制作で、実在の団体とは関係ありません。
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="#works">制作実績</a>
+      <a href="#skills">できること</a>
+      <a href="#flow">進め方</a>
+      <a href="#about">プロフィール</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

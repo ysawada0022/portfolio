@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trattoria Sole｜制作実績 — Youhei</title>
+<meta name="description" content="WordPressでゼロから書き起こしたレストランのテーマ。メニュー管理と、プラグインを使わない予約フォームを実装しました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">レストラン（イタリアン）／ WordPressクラシックテーマ</p>
+    <h1 class="work-head__title">Trattoria Sole</h1>
+    <p class="work-head__lead">メニューをカテゴリー別に管理でき、予約フォームの送信内容は管理画面から確認できます。ページビルダーも有料テーマも使わず、ゼロから書き起こしました。</p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://restaurantwp-9a3c44cade0b.herokuapp.com/" target="_blank" rel="noopener">実サイトを見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/trattoria-1.jpg" alt="Trattoria Soleのトップページ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>トップページ。落ち着いた色調で、料理写真を主役にしています。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/trattoria-2.jpg" alt="メニュー一覧ページ。お料理とお飲みものをセクションで分けている" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>メニュー一覧。お料理とお飲みものに分け、カテゴリーのタブでも絞り込めます。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>レストラン（イタリアン）／架空の店舗を想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・デザイン・実装・公開</td></tr>
+        <tr><th>使用技術</th><td>WordPress（クラシックテーマ）／ PHP ／ JavaScript ／ MySQL</td></tr>
+        <tr><th>制作物</th><td>テーマ本体 ／ サンプルデータ ／ デプロイ用パッケージ</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>お店の人が更新できること</h3>
+      <p>飲食店のサイトで一番困るのは、メニューや営業時間を変えたいときに制作者へ連絡しないといけない状態です。メニューは「メニュー」という専用の入力欄から追加でき、カテゴリー（前菜・パスタ・ピッツァ・ドルチェ・ドリンク）や価格、アレルゲン情報も管理画面から編集できるようにしました。</p>
+
+      <h3>予約フォームをプラグインなしで</h3>
+      <p>予約フォームは、WordPress標準の仕組みだけで実装しています。送信内容は非公開の形で保存され、管理画面の一覧から確認できます。URLを直接叩いても表示できないようにしてあります。</p>
+
+      <h3>実際に動かして確認した</h3>
+      <p>PHPを書いただけで終わらせず、ローカルにWordPressとデータベースを立てて動作を確認しました。メニュー18件・お知らせ3件を実際に登録し、予約フォームから送信してデータベースに保存されること、管理画面に表示されることまで確かめています。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：お知らせ一覧が表示されない</p>
+        <p>トップページ用のテンプレートが常に優先されるため、「お知らせ一覧」のページだけが表示できませんでした。WordPressのテンプレートの優先順位を調べ直し、投稿一覧専用のファイルが別途必要だと分かって追加しています。</p>
+      </div>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：パーマリンクの設定が壊れる</p>
+        <p>コマンドでURL形式を設定したところ、Windows特有のパス変換が働いて設定値が書き換わり、すべてのページが表示できなくなりました。変換を無効にして実行し直して解決しています。</p>
+      </div>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="tokiwa.html">次の実績：常盤建設 &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
