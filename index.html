@@ -69,7 +69,7 @@
     </div>
 
     <!--
-      件数（7件）を前面に出すと、制作会社の実績数と比較されて不利になります。
+      件数（8件）を前面に出すと、制作会社の実績数と比較されて不利になります。
       数の多さではなく「作り分けの幅」と「実装の深さ」が伝わる指標に置き換えています。
     -->
     <dl class="hero__stats">
@@ -96,7 +96,7 @@
       <p class="section__label">WORKS</p>
       <h2 class="section__title">制作実績</h2>
       <p class="section__lead">
-        すべて架空の店舗・企業を想定した自主制作です。<strong>7サイトとも実物を公開しており、その場で触っていただけます。</strong>
+        すべて架空の店舗・企業を想定した自主制作です。<strong>8サイトとも実物を公開しており、その場で触っていただけます。</strong>
         各ページには「何が難しかったか」「どう解いたか」まで書いています。
       </p>
     </div>
@@ -125,6 +125,35 @@
           </div>
           <div class="work__actions">
             <a class="work__external" href="https://kotoha-home-08854418cf80.herokuapp.com/" target="_blank" rel="noopener">
+              実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://kotoha-next-39956d4e0607.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="コトハ不動産Next.js版の実サイトを見る（別タブで開きます）" data-label="実サイトを見る ↗">
+              <img class="work__image" src="assets/img/works/kotoha-next-1.jpg" alt="コトハ不動産Next.js版の物件検索ページ。WordPress版と同じ見た目" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">Next.js</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">不動産（売買）／ フロントエンド刷新</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/kotoha-next.html">コトハ不動産（Next.js版）</a></h3>
+            <p class="work__desc">
+              WordPressを管理画面として残したまま、表示側だけをNext.jsで作り直し。同じサーバー・同じDBで表示速度を2〜3倍にしました。
+            </p>
+            <ul class="work__tags">
+              <li>Next.js</li><li>TypeScript</li><li>React</li><li>ヘッドレスCMS</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://kotoha-next-39956d4e0607.herokuapp.com/" target="_blank" rel="noopener">
               実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
             </a>
             <span class="work__more">制作の詳細 &rarr;</span>
@@ -342,6 +371,19 @@
       </article>
 
       <article class="skill">
+        <h3 class="skill__title">React / Next.js</h3>
+        <p class="skill__text">
+          WordPressを管理画面として残したまま、表示側だけをNext.jsで作り直す構成に対応します。
+          編集のしやすさを保ったまま、表示速度を上げられます。
+        </p>
+        <ul class="skill__list">
+          <li>Next.js（App Router）/ TypeScript</li>
+          <li>ヘッドレスCMS（WordPress REST API）</li>
+          <li>静的生成・再検証（ISR）</li>
+        </ul>
+      </article>
+
+      <article class="skill">
         <h3 class="skill__title">検索・データベース設計</h3>
         <p class="skill__text">
           物件検索、求人検索、店舗検索。複数条件の掛け合わせと、選ぶ前に件数が分かる絞り込みUIを実装します。
@@ -467,7 +509,7 @@
           いまは、デザインと同じくらい<strong>仕組みの部分</strong>を大事にしています。
         </p>
         <p class="about__text">
-          掲載している7件はすべて自主制作です。実在の会社ではありませんが、
+          掲載している8件はすべて自主制作です。実在の会社ではありませんが、
           「この業種ならこの機能が要るはず」と考えながら、実際に動くところまで作っています。
           不具合を見つけて直した過程も、各ページに正直に書いています。
         </p>

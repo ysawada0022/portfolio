@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コトハ不動産（Next.js版）｜制作実績 — Youhei</title>
+<meta name="description" content="WordPressをヘッドレスCMSとして使い、表示側をNext.jsで作り直した制作例。同じサーバー・同じデータベースで表示速度を2〜3倍にしました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">不動産（売買）／ ヘッドレスWordPress + Next.js</p>
+    <h1 class="work-head__title">コトハ不動産（Next.js版）</h1>
+    <p class="work-head__lead">
+      すでに作ってあったWordPressサイトの表示側だけを、Next.jsで作り直したものです。
+      管理画面はWordPressのまま、同じデータベースを見ています。
+    </p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://kotoha-next-39956d4e0607.herokuapp.com/" target="_blank" rel="noopener">Next.js版を見る（別タブ）</a>
+      <a class="btn btn--outline" href="https://kotoha-home-08854418cf80.herokuapp.com/" target="_blank" rel="noopener">WordPress版と見比べる</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/kotoha-next-1.jpg" alt="コトハ不動産Next.js版の物件検索ページ。左に絞り込み条件、右に物件カードが並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>物件検索。WordPress版と同じ見た目・同じ検索結果になるようにしています。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/kotoha-next-2.jpg" alt="物件詳細ページ。左に写真、右に価格と仕様の表" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>物件詳細。24件すべてビルド時に生成し、5分ごとに作り直しています。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>不動産（売買）／既存WordPressサイトのフロントエンド刷新</td></tr>
+        <tr><th>担当範囲</th><td>API設計・実装・デプロイ</td></tr>
+        <tr><th>使用技術</th><td>Next.js 16（App Router）／ React 19 ／ TypeScript ／ CSS Modules ／ WordPress REST API</td></tr>
+        <tr><th>制作物</th><td>Next.jsアプリ ／ WordPress側の配信用API（4エンドポイント）</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>なぜ作り直したか</h3>
+      <p>WordPressは編集画面が使いやすく、更新を依頼者自身で行えます。一方で表示のたびにPHPがデータベースを引いてHTMLを組み立てるため、待ち時間が積み上がります。</p>
+      <p><strong>編集のしやすさは残したまま、表示だけ速くする</strong>というのがこの構成の狙いです。WordPressは管理画面とデータ置き場として使い、閲覧者が見る画面はNext.jsが作ります。</p>
+
+      <h3>同じ条件で2〜3倍になりました</h3>
+      <p>両方とも同じHerokuのリージョンに置き、同じデータベースを見た状態で9回計測した中央値です。</p>
+
+      <table class="spec">
+        <thead>
+          <tr><th>ページ</th><th>WordPress版</th><th>Next.js版</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>トップ</th><td>554ms</td><td>187ms</td></tr>
+          <tr><th>物件検索</th><td>554ms</td><td>199ms</td></tr>
+          <tr><th>物件詳細</th><td>383ms</td><td>185ms</td></tr>
+        </tbody>
+      </table>
+
+      <p>差はレンダリング方式から来ています。物件詳細24件はビルド時にHTMLを作り終えており、閲覧者が来てから組み立てていません。5分ごとに裏で作り直すので、WordPressで編集した内容もそのまま反映されます。</p>
+      <p>なお検索ページはHTMLが47KBから67KBに増えています。絞り込みの選択肢をすべてリンクとして書き出しているためで、後述のJavaScript無しでも動く設計と引き換えです。</p>
+
+      <h3>検索ロジックはWordPress側を再利用した</h3>
+      <p>「グループ内はOR・グループ間はAND」という絞り込みの仕様を両方に実装すると、片方だけ直したときに検索結果がずれます。</p>
+      <p>WordPressに配信用のエンドポイントを追加し、既存の検索処理をそのまま呼ぶようにしました。価格を「5,480万円」と整形する処理も同じ理由でWordPress側に置いています。<strong>Next.js側は表示に専念し、業務の決まりごとは1か所にまとめる</strong>という分け方です。</p>
+
+      <h3>JavaScriptが無効でも検索できる</h3>
+      <p>絞り込みはチェックボックスではなくリンクで作っています。条件はURLに載るため、条件つきのURLをそのまま共有でき、ブラウザの戻る／進むも実装せずに成立します。この設計はWordPress版から引き継ぎました。</p>
+
+      <h3>書き込みは共有シークレットで守る</h3>
+      <p>お問い合わせの受信だけは書き込みが発生します。公開状態のまま誰でも送信できると、そのまま投稿を作られてしまうため、Next.jsのサーバー側だけが知る文字列をヘッダーで渡し、WordPress側で照合しています。設定が漏れている場合はエンドポイント自体を無効にします。動かないほうが、書き込み放題になるより安全だと判断しました。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：ビルドは通るのに、公開すると500になった</p>
+        <p>お問い合わせページだけがエラーになりました。原因は、Server Action（サーバー側で動く関数）のファイルに、フォームの初期状態を表す定数を一緒に置いていたことです。このファイルからエクスポートできるのは非同期関数だけで、定数は実行時に空になります。型チェックもビルドも通るため、公開して初めて分かりました。</p>
+        <p>定数を別ファイルに移して解決しています。<strong>「ビルドが通ること」と「動くこと」は別物で、本番と同じ形で一度動かすまで確認は終わらない</strong>と学びました。</p>
+      </div>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：絞り込みの件数が全部0だった</p>
+        <p>選択肢の横に出る件数がすべて0になっていました。件数を集計する既存の処理は「スラッグ」をキーに結果を返すのに、こちらは数値のIDで取り出そうとしていたためです。</p>
+        <p>既存のWordPress版には影響しない、API追加時に自分で持ち込んだ不具合でした。既存コードを再利用するときは、呼び出し方だけでなく<strong>戻り値の形まで確認する</strong>必要がありました。</p>
+      </div>
+
+      <h3>この構成が向く場面・向かない場面</h3>
+      <p>更新頻度が高く、編集者がWordPressに慣れている案件には向きます。一方で、サーバーが2つになるぶん運用先が増え、費用も構成も複雑になります。ページ数が少なく更新も稀なサイトであれば、WordPress単体のままが適切だと考えています。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="sorairo-clinic.html">次の実績：そらいろクリニック &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
