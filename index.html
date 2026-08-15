@@ -69,17 +69,17 @@
     </div>
 
     <!--
-      件数（7件）を前面に出すと、制作会社の実績数と比較されて不利になります。
+      件数（8件）を前面に出すと、制作会社の実績数と比較されて不利になります。
       数の多さではなく「作り分けの幅」と「実装の深さ」が伝わる指標に置き換えています。
     -->
     <dl class="hero__stats">
       <div class="hero__stat">
         <dt>作り分けた構成</dt>
-        <dd><span class="hero__num">6</span>種類</dd>
+        <dd><span class="hero__num">7</span>種類</dd>
       </div>
       <div class="hero__stat">
         <dt>実装した機能</dt>
-        <dd><span class="hero__num">9</span>種類</dd>
+        <dd><span class="hero__num">11</span>種類</dd>
       </div>
       <div class="hero__stat">
         <dt>使用ページビルダー</dt>
@@ -96,7 +96,7 @@
       <p class="section__label">WORKS</p>
       <h2 class="section__title">制作実績</h2>
       <p class="section__lead">
-        すべて架空の店舗・企業を想定した自主制作です。<strong>7サイトとも実物を公開しており、その場で触っていただけます。</strong>
+        すべて架空の店舗・企業を想定した自主制作です。<strong>8件とも実物を公開しており、その場で触っていただけます。</strong>
         各ページには「何が難しかったか」「どう解いたか」まで書いています。
       </p>
     </div>
@@ -126,6 +126,35 @@
           <div class="work__actions">
             <a class="work__external" href="https://kotoha-next-39956d4e0607.herokuapp.com/" target="_blank" rel="noopener">
               実サイトを見る<span class="work__external-icon" aria-hidden="true">↗</span>
+            </a>
+            <span class="work__more">制作の詳細 &rarr;</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="work">
+        <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
+        <div class="work__inner">
+          <div class="work__media">
+            <a class="work__media-link" href="https://alto-reserve-8df813e1d4c3.herokuapp.com/" target="_blank" rel="noopener"
+               aria-label="ALTO 予約システムを実際に触ってみる（別タブで開きます）" data-label="実際に予約してみる ↗">
+              <img class="work__image" src="assets/img/works/alto-reserve-1.jpg" alt="予約システムの日時選択画面。7日分の空き状況が時間×日付の表になっている" width="1200" height="750" loading="lazy" decoding="async">
+            </a>
+            <span class="work__badge">Webアプリ</span>
+          </div>
+          <div class="work__body">
+            <p class="work__genre">美容室（予約受付）</p>
+            <h3 class="work__title"><a class="work__title-link" href="works/alto-reserve.html">ALTO 予約システム</a></h3>
+            <p class="work__desc">
+              美容室サイトの予約ボタンの先。二重予約はデータベースの制約で止め、同時アクセスを再現したテストで確認しています。
+            </p>
+            <ul class="work__tags">
+              <li>Next.js</li><li>TypeScript</li><li>MySQL</li><li>認証</li><li>テスト</li>
+            </ul>
+          </div>
+          <div class="work__actions">
+            <a class="work__external" href="https://alto-reserve-8df813e1d4c3.herokuapp.com/" target="_blank" rel="noopener">
+              実際に予約してみる<span class="work__external-icon" aria-hidden="true">↗</span>
             </a>
             <span class="work__more">制作の詳細 &rarr;</span>
           </div>
@@ -368,6 +397,19 @@
       </article>
 
       <article class="skill">
+        <h3 class="skill__title">予約・ログインの実装</h3>
+        <p class="skill__text">
+          空き状況の計算から予約の確定、スタッフ用の管理画面までを作ります。
+          二重予約のように「同時に操作されたときだけ起きる」不具合は、その状況を再現するテストを書いて確認しています。
+        </p>
+        <ul class="skill__list">
+          <li>予約枠の設計（重複の防止）</li>
+          <li>ログイン・パスワードの管理</li>
+          <li>自動テスト（Vitest）</li>
+        </ul>
+      </article>
+
+      <article class="skill">
         <h3 class="skill__title">フォームの実装</h3>
         <p class="skill__text">
           プラグインに頼らず、入力チェックとスパム対策まで作ります。
@@ -480,7 +522,7 @@
           いまは、デザインと同じくらい<strong>仕組みの部分</strong>を大事にしています。
         </p>
         <p class="about__text">
-          掲載している7件はすべて自主制作です。実在の会社ではありませんが、
+          掲載している8件はすべて自主制作です。実在の会社ではありませんが、
           「この業種ならこの機能が要るはず」と考えながら、実際に動くところまで作っています。
           不具合を見つけて直した過程も、各ページに正直に書いています。
         </p>

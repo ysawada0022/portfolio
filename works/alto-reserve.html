@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALTO 予約システム｜制作実績 — Youhei</title>
+<meta name="description" content="美容室の予約受付と当日の予約確認をひとつにしたWebアプリ。二重予約はデータベースの制約で止め、同時アクセスを再現したテストで確認しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">美容室（予約受付）／ Next.js + MySQL</p>
+    <h1 class="work-head__title">ALTO 予約システム</h1>
+    <p class="work-head__lead">
+      美容室サイト「ALTO」の予約ボタンの先を作ったものです。
+      お客様がその場で予約でき、スタッフは当日の予約を一覧で確認できます。
+    </p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://alto-reserve-8df813e1d4c3.herokuapp.com/" target="_blank" rel="noopener">実際に予約してみる（別タブ）</a>
+      <a class="btn btn--outline" href="alto.html">入口になっているALTOのサイト</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/alto-reserve-1.jpg" alt="日時選択画面。7日分の空き状況が時間×日付の表になっており、丸・バツ・休業日が並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>日時の選択。選んだメニューの所要時間ぶん空いている時間だけを丸で出しています。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/alto-reserve-2.jpg" alt="スタッフ用の予約一覧画面。日付ごとに件数と売上、時間順に並んだ予約カード" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>スタッフ用の予約一覧。当日の予約を時間順に並べ、電話番号とご要望まで見えるようにしました。ログインが必要な画面のため、実際に動いているものを撮影しています。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>美容室の予約受付／店舗サイトに追加するWebアプリ</td></tr>
+        <tr><th>担当範囲</th><td>要件整理・データベース設計・実装・テスト・デプロイ</td></tr>
+        <tr><th>使用技術</th><td>Next.js 16（App Router）／ React 19 ／ TypeScript ／ Prisma 7 ／ MySQL ／ Vitest</td></tr>
+        <tr><th>規模</th><td>お客様側5画面 ／ スタッフ側2画面 ／ メニュー11件 ／ スタイリスト3名</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>店舗サイトだけでは、予約が電話とメールに戻ってしまう</h3>
+      <p>ALTOのような店舗サイトを作っても、予約の受け方が「お問い合わせフォーム」のままだと、送られてきた内容をスタッフが読んで、紙の台帳に書き写すことになります。営業時間外に届いた分は翌日まで放置され、その間に電話で入った予約と重なることもあります。</p>
+      <p>そこで<strong>空き状況をその場で見せて、確定まで完了する</strong>ところまで作りました。お客様はメニュー → スタイリスト → 日時 → お客様情報の4ステップで予約でき、完了後は予約番号で内容を確認できます。</p>
+
+      <h3>二重予約は、アプリではなくデータベースに止めさせた</h3>
+      <p>予約システムでいちばん困るのは、同じスタイリストの同じ時間に2件入ってしまうことです。素直に書くなら「空いているか調べてから、空いていれば登録する」ですが、これは2人が同時に操作すると両方とも通ります。調べ終えてから登録するまでの一瞬に、もう一方が割り込めるためです。</p>
+      <p>そこで予約時間を30分ごとの「枠」に分けて別の表に持ち、<strong>スタイリストと時刻の組み合わせに重複禁止をかけました</strong>。60分のメニューなら枠を2つ取ります。同じ枠を2件目が取ろうとするとデータベース自体が拒否するので、アプリ側の判断を通り抜けて登録されることがありません。</p>
+      <p>拒否されたときはエラー画面ではなく「ご希望の時間は、たった今埋まってしまいました」と伝えて日時選択に戻します。仕組み上どうしても起きうる以上、起きた時の見せ方まで作っておく必要がありました。</p>
+
+      <h3>「本当に1件しか通らないのか」をテストで確かめた</h3>
+      <p>この種の不具合は、手で操作しても再現できません。同じ予約を5件まとめて同時に送るテストを書き、1件だけ成功して4件が「埋まっています」になることを確認しています。</p>
+
+      <table class="spec">
+        <thead>
+          <tr><th>テストの種類</th><th>件数</th><th>確かめていること</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>営業時間・定休日</th><td>13件</td><td>火曜と第3月曜は候補が0、土日は開店が1時間早い</td></tr>
+          <tr><th>日付と時刻の計算</th><td>10件</td><td>日本時間とサーバー時刻（UTC）の変換、月をまたぐ加算</td></tr>
+          <tr><th>予約の登録（実DB）</th><td>10件</td><td>重複の拒否、同時5件で1件だけ成功、キャンセル後の枠の解放</td></tr>
+        </tbody>
+      </table>
+
+      <p>合計33件で、うち10件は本番と同じMySQLに実際につないで動かしています。時刻の計算はサーバーがUTCで動くため取り違えやすく、変換を1つのファイルにまとめたうえでテストを付けました。</p>
+
+      <h3>空いている時間の出し方</h3>
+      <p>丸を出す条件は4つあります。<strong>所要時間ぶんの枠が連続して空いている</strong>こと、その時間に予約が入っていないこと、スタイリストの休憩などがかぶっていないこと、そして<strong>開始1時間前を過ぎていない</strong>ことです。</p>
+      <p>最後の条件は、直前予約で準備が間に合わない事態を避けるためのものです。営業時間は平日11時から21時（最終受付19時半）、土日は10時から20時（同18時半）、定休日は火曜と第3月曜としています。この「店の決まりごと」は1つのファイルにまとめてあり、営業時間を変えたいときはそこだけ直せば、空き状況の表示もテストも一緒に変わります。</p>
+
+      <h3>ログイン機能は自分で作った</h3>
+      <p>スタッフ画面には外部サービスを使わず、パスワードの保存とログイン状態の管理を自分で実装しました。仕組みを理解しないまま任せたくなかったためです。</p>
+      <p>パスワードはそのまま保存せず、利用者ごとに違う値を混ぜて計算した結果だけを保存しています。ログイン状態はブラウザに預ける文字列で管理し、<strong>JavaScriptから読めない形式</strong>にして、有効期限もデータベース側に持たせました。ログアウトでその記録を消せば、その時点で無効になります。</p>
+      <p>存在しないメールアドレスで試されたときも、実在する場合と同じだけ計算してから断っています。返答の速さの違いで「このアドレスは登録されている」と判別されるのを防ぐためです。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：手元では動くのに、公開すると起動しなかった</p>
+        <p>Windowsで作った依存関係の一覧をそのまま持っていったところ、Linuxのサーバーで組み立てに失敗しました。一覧に、Linuxでだけ必要な部品が記録されていなかったためです。厳密な再現を求める方式をやめ、環境に合わせて解決する方式に切り替えて通しています。</p>
+        <p>手元とサーバーでOSが違う以上、<strong>「同じものが入る」という前提は置けない</strong>ということでした。</p>
+      </div>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：確認用に書いたスクリプトのほうが間違っていた</p>
+        <p>公開後の動作確認で「予約したのに、その時間が閉じていない」と出ました。調べたところ、確認スクリプトが画面から時刻だけを探していたのが原因でした。空き状況は7日分が横に並んだ表なので、同じ時刻が7つあり、別の日の丸を拾っていたのです。</p>
+        <p>日付と時刻の組み合わせで探すように直したところ、正しく閉じていました。<strong>確認する側にも同じだけ不具合が入りうる</strong>ので、失敗を見たときはまず自分の測り方を疑うようにしています。</p>
+      </div>
+
+      <h3>実運用に足りていないもの</h3>
+      <p>お見せするために作ったものなので、実際の店舗に入れるなら追加が必要です。予約完了メールの送信、当日のリマインド、スタッフ自身によるメニューや休憩時間の登録画面、そして予約の変更操作。現状スタッフ側でできるのは、来店済み・キャンセルへの状態変更までです。</p>
+      <p>キャンセルにすると枠を解放して別のお客様が予約できるようにしてあります。ここまでは押さえたうえで、残りは実際の運用を聞いてから決めるべき部分だと考えています。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="sorairo-clinic.html">次の実績：そらいろクリニック &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
