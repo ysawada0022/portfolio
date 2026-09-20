@@ -1,6 +1,6 @@
 # Web制作ポートフォリオ
 
-静的サイトからWordPressテーマ開発まで、7件の自主制作をまとめたポートフォリオサイトです。
+静的サイトからWordPressテーマ開発、Next.jsのWebアプリまで、9件の自主制作をまとめたポートフォリオサイトです。
 
 **公開URL** https://ysawada0022.github.io/portfolio/
 
@@ -8,11 +8,13 @@
 
 | サイト | 種別 | 主な技術 |
 | --- | --- | --- |
-| コトハ不動産 | 不動産（売買） | WordPress / WP_Query / Ajax |
+| コトハ不動産 | 不動産（売買） | Next.js / TypeScript / ヘッドレスCMS（WordPress） |
+| ALTO 予約システム | 美容室（予約受付） | Next.js / TypeScript / Prisma / MySQL / Vitest |
 | そらいろクリニック | クリニック | WordPress（ブロックテーマ / FSE）/ theme.json |
 | Trattoria Sole | レストラン | WordPress（クラシックテーマ）/ カスタム投稿 |
 | 常盤建設 | 建設業（BtoB） | HTML / CSS / JavaScript |
 | ALTO | 美容室 | HTML / CSS / Bootstrap / Swiper |
+| 炭火焼肉 燈火 | 焼肉店（新規オープン） | HTML / CSS / JavaScript / インラインSVG |
 | CODEBRIDGE | オンラインITスクール | HTML / CSS / JavaScript |
 | FORMA | パーソナルジム | HTML / CSS / JavaScript |
 
