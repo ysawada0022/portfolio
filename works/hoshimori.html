@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星守 -HOSHIMORI-｜制作実績 — Youhei</title>
+<meta name="description" content="八ヶ岳南麓の温泉つきグランピング施設の集客ランディングページ。「いつ行けば星が見えるか」に答える月齢カレンダーを自作し、写真16点は画像生成モデルで作りました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">グランピング施設（温泉つき）／ 静的ランディングページ ＋ 広告バナー</p>
+    <h1 class="work-head__title">星守 -HOSHIMORI-</h1>
+    <p class="work-head__lead">
+      八ヶ岳南麓、標高1,200mに建つ温泉つきグランピング施設の集客ページです。
+      「満天の星空と天然温泉」という売りを、どう「今週末に予約する理由」まで持っていくかを主題にして作りました。
+    </p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://ysawada0022.github.io/hoshimori-glamping/" target="_blank" rel="noopener">実サイトを見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/hoshimori-1.jpg" alt="星守のファーストビュー。湯気の立つ石組みの露天風呂が手前にあり、奥に光るドームテント、頭上に天の川が広がる" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>ファーストビュー。売りが2つ（星空と温泉）あるので、1枚の写真に両方入れています。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/hoshimori-2.jpg" alt="月齢カレンダー。9月の各日に月の満ち欠けの絵が並び、21日が選択され、4段階の凡例が上に表示されている" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>月齢カレンダー。星の見えかたは月の明るさでほぼ決まるので、日付ごとに4段階で出し分けています。</figcaption>
+    </figure>
+    <figure class="work-shot">
+      <img src="../assets/img/works/hoshimori-3.jpg" alt="温泉セクション。昼の貸切露天風呂と共用露天風呂の写真の横に、源泉名・泉質・湧出量の表が並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>温泉。自家源泉であることを、泉質・泉温・湧出量の数字で裏づけています。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>グランピング施設の集客／架空の施設を想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・構成・デザイン・実装・写真の生成・動作確認</td></tr>
+        <tr><th>使用技術</th><td>HTML ／ CSS（BEM設計）／ JavaScript（ライブラリ不使用）／ インラインSVG ／ Node.js（バナー書き出し・自動確認）</td></tr>
+        <tr><th>規模</th><td>1ページ11セクション ／ 広告バナー8サイズ ／ 自動確認26項目</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>「星がきれい」だけでは、日付が決まらない</h3>
+      <p>星空を売りにする宿のページは、たいてい「満天の星空」と書いて天の川の写真を貼って終わります。読んだ人は「きれいだな」とは思いますが、<strong>いつ行けばそれが見られるのかが分からない</strong>ので、予約には進みません。</p>
+      <p>星の見えかたは、実際には月の明るさでほとんど決まります。満月の夜にどれだけ空気が澄んでいても、天の川は月明かりに負けて見えません。そこで、月齢から見えかたを判定するカレンダーを作り、「いつ来ればいちばん見えるか」を先に答えるようにしました。</p>
+
+      <h3>月齢を自分で計算する</h3>
+      <p>朔望月 29.530588853日と、2000年1月6日18:14（UTC）の新月を基準にして、任意の日の月齢を出しています。ライブラリは使っていません。新月からの距離で「天の川まで見えます／夜半から暗くなります／月明かりが少しあります／月そのものがよく見える夜」の4段階に振り分けています。</p>
+      <p>計算が正しいか確かめるため、2026年の実際の新月・満月9件と突き合わせました。<strong>最大のずれは0.89日</strong>で、判定の幅が±3.5日なので目安としては足りています。そのうえで、月齢だけでは決まらない（天気と、月の出入りの時刻がある）ことはページ上に明記しました。当たらない予測を言い切るほうが、宿としては損だと考えています。</p>
+
+      <h3>月の満ち欠けを、画像を使わずに描く</h3>
+      <p>カレンダーには日数ぶんの月の絵が要ります。30枚の画像を用意すると差し替えも配色変更も面倒なので、SVGで描きました。外周の半円と、横半径だけが変わる半楕円（明暗の境界）を2本の円弧でつなぎ、光っている側だけを塗っています。月齢を渡せば任意の形が出るので、画像は1枚も持っていません。</p>
+
+      <h3>日付を3か所で共有する</h3>
+      <p>日付を選ぶ場所が、ファーストビューの検索ボックス・カレンダー・予約フォームの3か所あります。別々に持つとどこかがずれるので、どこで変えても残り2か所とカレンダーの表示月が追従するようにしました。月齢の計算も判定も1か所にまとめ、3か所が同じ関数を呼びます。</p>
+
+      <h3>バナー8枚を、画像編集ソフトを使わずに作る</h3>
+      <p>広告バナーは「同じ訴求を、媒体ごとに違うサイズで」出すものです。1枚ずつ作ると、コピーを1文字直すたびに8枚すべてを作り直すことになります。</p>
+      <p>そこで訴求とサイズを別々のデータに持ち、HTML/CSSで描いて実ブラウザから書き出す形にしました。コピーを直す場所は1か所で、コマンド1回で8枚が揃います。狭い枠（300×250 / 728×90 / 160×600）は折り返すと読めなくなるため、1行用の短いコピーに自動で差し替えています。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：ファーストビューの写真が、真っ黒にしか見えなかった</p>
+        <p>ファーストビューに写真を入れたのに、開くと星空しか見えず、肝心のドームも露天風呂も消えていました。最初は切り抜きの指定（<code>object-position</code>）が悪いのだと思い、その前提でメモまで残しました。</p>
+        <p>実際に描画された大きさを測ってみると、<strong>縦は1ピクセルも切れていません</strong>でした。原因は写真の上に重ねた暗い覆いで、文字を読ませるために左を0.94、下を0.96まで濃くしていました。被写体はその下に沈んでいただけです。文字が乗る左側だけを落とす形に変えて解決しています。</p>
+        <p>見た目から原因を推測して、確かめずにメモを残していたのが良くなかった点です。測れば1分で分かることでした。</p>
+      </div>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：露天風呂を頼んだら、井戸が出てきた</p>
+        <p>写真は画像生成モデル（FLUX.1 Krea-dev）で作っています。ファーストビュー用に「ドームテントのそばに、小さな石造りの露天風呂」と指定したところ、出てきたのは井戸のような石組みで、湯気も細く、どう見ても風呂に見えませんでした。</p>
+        <p><strong>添え物として書いた要素は、添え物としてしか描かれない</strong>のだと分かりました。「湯船を画面の主役に、手前の右寄りに大きく」「湯がなみなみと張られた水面と、逆光で白く光る湯気」と書き直したら、一度で意図どおりのものが出ています。文章と同じで、主役は主役として書く必要がありました。</p>
+      </div>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：配色を反転したら、日付のアイコンが消えた</p>
+        <p>当初は夜空を基調にした暗い配色でしたが、温泉の施設としては重いので、湯を思わせる淡い青緑に変えました。背景と文字が対になって参照される作りだったため、変数の値を入れ替えるだけで大半は反転できています。</p>
+        <p>問題は、変数を通していなかった箇所でした。日付入力欄のカレンダーアイコンに、暗い背景用の反転指定（<code>filter: invert(1)</code>）が直接書かれていて、地を明るくしたことで<strong>白地に白のアイコン</strong>になり見えなくなっていました。予約フォーム側にも効いていたので、両方まとめて外しています。</p>
+        <p>配色を入れ替えるときは、変数で拾える箇所より、<strong>変数を通さず直接書いた箇所のほうが危ない</strong>と感じました。</p>
+      </div>
+
+      <h3>文字の読みやすさは、目視ではなく実測で詰めた</h3>
+      <p>配色を全面的に入れ替えたので、明るい面に載る文字のコントラストを1つずつ測りました。単色の背景に載る文字217要素のうち、<strong>最初は17件がWCAG AAの基準を下回っていました</strong>。差し色の青緑とグレーの文字色を暗くし、CTAの橙は白抜き用とは別に文字用の色を足して、最終的に0件にしています。</p>
+      <p>目で見て「読めそう」と判断していたら、この17件はそのまま残っていたはずです。</p>
+
+      <h3>作ったものが動くか、ブラウザを動かして確かめた</h3>
+      <p>日付の共有や月齢の判定など、数字と状態が絡む部品が多いので、実際のブラウザを操作して結果を確認するスクリプトを書きました。26項目あり、すべて通っています。</p>
+
+      <table class="spec">
+        <thead>
+          <tr><th>確認した部分</th><th>件数</th><th>確かめていること</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>月齢の計算</th><td>1件</td><td>2026年の実際の新月・満月9件と一致すること（最大ずれ0.89日）</td></tr>
+          <tr><th>カレンダー</th><td>8件</td><td>今月の表示、日数ぶんのマスと月の絵、過去日が押せないこと、月送りと下限</td></tr>
+          <tr><th>日付の共有</th><td>5件</td><td>選んだ日が検索ボックスと予約フォームに入ること、3か所に同じ月齢が出ること、入力欄から変えるとカレンダーが追従すること</td></tr>
+          <tr><th>判定</th><td>1件</td><td>1ヶ月のあいだに4段階すべてが現れること</td></tr>
+          <tr><th>よくある質問</th><td>3件</td><td>開閉、押したものだけが開くこと、支援技術向けの属性</td></tr>
+          <tr><th>予約の導線</th><td>2件</td><td>泊数と人数がフォームへ引き継がれること、お名前欄へカーソルが移ること</td></tr>
+          <tr><th>フォーム</th><td>3件</td><td>未入力で送信されないこと、完了表示、送信後のリセット</td></tr>
+          <tr><th>ページ全体</th><td>3件</td><td>ページ内リンクの飛び先、全画像の代替テキスト、エラーが出ていないこと</td></tr>
+        </tbody>
+      </table>
+
+      <p>このほか、パソコン幅とスマートフォン幅での全セクションの表示、横スクロールが出ないこと、JavaScriptを切った状態でも全セクションが読めることを目で確認しました。</p>
+
+      <h3>写真は生成して作った</h3>
+      <p>架空の施設なので、条件に合う写真は探しても見つかりません。16点すべて画像生成モデルで作る前提で、必要な絵の内容を1点ずつ文章に起こしました。生成できていないぶんは、<strong>「この枠に最終的にどんな写真が入るか」を日本語で書いた仮画像</strong>を置いています。何が入るか分かる状態にしておかないと、レイアウトの判断ができないためです。</p>
+      <p>執筆時点で16点中8点が写真で、残り8点は仮画像のままです。無料の計算枠が1日あたりで区切られており、一度に7点ほどで頭打ちになるためです。枠が開いた日に差し替えます。</p>
+
+      <h3>実運用に足りていないもの</h3>
+      <p>お見せするために作ったものなので、実際に開業するなら追加が必要です。予約フォームは送信処理を持たないデモで、実運用では確認メールの送信と予約台帳への登録、そして空室の在庫管理が要ります。いまは日付・泊数・人数を受け取ってフォームに渡すだけで、実際に空いているかは見ていません。</p>
+      <p>月齢カレンダーについては、天気予報のAPIと組み合わせられると実用性が上がります。月齢は何ヶ月先でも計算できますが、天気は直前にならないと分からないので、<strong>遠い日は月齢だけ、近い日は天気も添える</strong>という出し分けが要ると考えています。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="kotoha-next.html">次の実績：コトハ不動産 &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
