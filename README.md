@@ -1,6 +1,6 @@
 # Web制作ポートフォリオ
 
-静的サイトからWordPressテーマ開発、Next.jsのWebアプリまで、9件の自主制作をまとめたポートフォリオサイトです。
+静的サイトからWordPressテーマ開発、Next.jsのWebアプリ、SNSクリエイティブまで、12件の自主制作をまとめたポートフォリオサイトです。
 
 **公開URL** https://ysawada0022.github.io/portfolio/
 
@@ -17,9 +17,13 @@
 | 炭火焼肉 燈火 | 焼肉店（新規オープン） | HTML / CSS / JavaScript / インラインSVG |
 | CODEBRIDGE | オンラインITスクール | HTML / CSS / JavaScript |
 | FORMA | パーソナルジム | HTML / CSS / JavaScript |
+| 星守 -HOSHIMORI- | グランピング施設（温泉つき） | HTML / CSS / JavaScript |
+| nagi -凪- | 化粧品（スキンケア） | HTML / CSS / JavaScript / インラインSVG |
+| おしごとメモ | Instagram（投稿・広告バナー） | Canva / HTML / CSS / Node.js（書き出し） |
 
 いずれも架空の店舗・企業を想定した自主制作で、実在の団体とは関係ありません。
-各サイトは実物を公開しており、ポートフォリオ内の「実サイトを見る」から確認できます。
+Webサイト11件は実物を公開しており、ポートフォリオ内の「実サイトを見る」から確認できます。
+「おしごとメモ」はInstagram投稿・広告バナーの制作物のため、実績ページ内で画像を掲載しています。
 
 ## このリポジトリについて
 

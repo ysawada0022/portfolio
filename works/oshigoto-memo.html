@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>おしごとメモ｜制作実績 — Youhei</title>
+<meta name="description" content="20代の会社員に向けたスキルアップ情報アカウントを想定したInstagramクリエイティブ。カルーセル7枚・表紙4種・広告バナーを、テキストを書き換えるだけで量産できるテンプレートとして設計しました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">Instagram（投稿・広告バナー）／ スキルアップ情報アカウント</p>
+    <h1 class="work-head__title">おしごとメモ</h1>
+    <p class="work-head__lead">
+      仕事終わりに何か始めたい20代の会社員へ、スキルと働き方の情報を届けるアカウントを想定した投稿一式です。
+      1枚ずつ手で組むのではなく、<strong>テキストを書き換えるだけで同じトーンの投稿が出てくる状態</strong>にするところまでを主題にして作りました。
+    </p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/oshigoto-1.jpg" alt="おしごとメモの投稿3枚。淡い桃色の地に、カフェの手元写真を敷いた表紙、写真ヘッダーつきの中面、チェックリスト形式のまとめページが並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>表紙・中面・まとめ。3種類の型だけで1本の投稿が成立します。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/oshigoto-2.jpg" alt="カルーセル投稿7枚の一覧。表紙、POINT 01から05の中面5枚、チェックリストのまとめページ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>7枚組の全体。中面は進捗バーで「あと何枚か」が常に見えます。</figcaption>
+    </figure>
+    <figure class="work-shot">
+      <img src="../assets/img/works/oshigoto-3.jpg" alt="表紙のバリエーション4種。写真を上に置いた版、通勤バッグの写真、写真なしの2種が並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>表紙4種。写真の有無が変わっても同じアカウントに見えることを優先しました。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>Instagram投稿・広告バナー／架空のアカウントを想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・構成・コピーライティング・デザイン・写真素材の生成・テンプレート化</td></tr>
+        <tr><th>使用ツール</th><td>Canva ／ HTML・CSS（書き出し用テンプレート）／ Node.js ／ FLUX（画像生成）</td></tr>
+        <tr><th>規模</th><td>カルーセル7枚 ＋ 表紙4種 ＋ 広告バナー ／ 配色3案 ／ 写真素材14点</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>保存されない投稿は、届いていないのと同じ</h3>
+      <p>情報系のアカウントは、その場で読まれて終わってしまうと次につながりません。最初に決めたのは「保存される形にする」ことで、そこから3種類の型に落としました。</p>
+      <p><strong>表紙</strong>は、数字を大きく出して読む前に得られるものを示します。<strong>中面</strong>は5分割の進捗バーを常に置き、残りが見えるようにして離脱を防ぎます。<strong>まとめ</strong>は本文を繰り返さず、チェックリストの形で並べ直して「あとで見返す価値がある1枚」にしました。保存を促す文言は、まとめページにだけ置いています。</p>
+      <p>中面のタグに「15分でOK」と所要時間を入れているのも同じ理由です。内容が良くても、重たく見えた時点で保存されません。</p>
+
+      <h3>読者を決めたら、配色も言葉も作り直しになった</h3>
+      <p>最初はベージュ×オレンジの角ゴシックで組みました。情報は整理できていたのですが、<strong>20代女性のフィードに並べると明らかに硬く</strong>、広告バナーのように見えます。</p>
+      <p>そこで、くすみピンク＋丸ゴシックに変え、コピーも書き直しました。「未来の自分に投資する」のような言い方をやめ、「なんとなくスマホ見て終わる夜を、ちょっとだけ“未来のわたし”に。」のように、共感から入って提案で終わる形に全文差し替えています。中面も「定時で帰る先輩、だいたい指が速い。」のように、読者が職場で見ている景色から書き起こしました。</p>
+      <p>ここで分かったのは、<strong>配色だけ変えても届く相手は変わらない</strong>ということでした。同じ内容でも、一人称と語尾を変えないと読者は自分ごとにしません。</p>
+
+      <figure class="work-shot" style="margin-top:36px">
+        <img src="../assets/img/works/oshigoto-5.jpg" alt="配色3案の比較。同じ表紙をくすみピンク、ミルクブラウン、くすみグリーンで並べ、それぞれのカラーコードを添えた一覧" width="1200" height="750" loading="lazy" decoding="async">
+        <figcaption>同じ写真・同じレイアウトで、アクセントカラーだけを変えた3案。</figcaption>
+      </figure>
+
+      <h3>配色は3案つくって、1案に決めた</h3>
+      <p>好みで選ぶと後から戻せなくなるので、同じ表紙のまま色だけ変えた3案を並べて比較しました。ミルクブラウン（#B08968）は落ち着きますが年齢層が上に寄り、くすみグリーン（#7E9B77）は競合と被りにくい代わりに「おしごと」の文脈から離れます。最終的に<strong>くすみピンク（#DE8194）</strong>にしました。</p>
+      <p>色はCSS変数で6つに整理してあります。アクセント、背景、カード、文字、サブ文字、マーカーの6つで、<strong>変数を書き換えれば全枚数に一度で反映されます</strong>。ブランドカラーが決まっている案件でも、指定のカラーコードを差し込むだけで済みます。</p>
+      <table class="spec">
+        <thead>
+          <tr><th>役割</th><th>カラーコード</th><th>使いどころ</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>アクセント</th><td>#DE8194</td><td>数字バッジ、進捗バー、強調文字</td></tr>
+          <tr><th>背景／カード</th><td>#FBF1F0／#FFFBFA</td><td>地色と、文字を載せる白場</td></tr>
+          <tr><th>文字／サブ文字</th><td>#493A3E／#9C838A</td><td>見出しと本文</td></tr>
+        </tbody>
+      </table>
+      <p>文字色を黒（#000）にしなかったのは、写真の色味が淡いぶん黒だけが浮いて見えるためです。赤紫寄りのこげ茶にすると、写真と地色の間に収まります。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：写真を敷いたのに、写真が見えなかった</p>
+        <p>最初は写真を全面に敷き、その上に半透明のカードを重ねる作りにしました。ところが<strong>カードが画面のほとんどを覆うため、写真は枠のように数十pxしか見えません</strong>。しかも被写体（手元とラテ）はちょうどカードの下に隠れていました。</p>
+        <p>直し方を2つ試しました。カードを薄くして写真を透かす案は、文字が写真の模様に負けて読みにくくなります。採用したのは<strong>カードを上下どちらかに寄せ、写真を約380px分そのまま見せる</strong>案です。被写体が下にある写真は上にカードを置き、俯瞰の写真は下に置く。写真ごとにカードの位置を選べるようにしました。</p>
+        <p>透かして両立させようとするより、<strong>読ませる場所と見せる場所を分けたほうが早い</strong>という判断です。</p>
+      </div>
+
+      <h3>写真が毎回変わっても、同じアカウントに見えるようにする</h3>
+      <p>情報系アカウントはプロフィール画面で9枚並んで見られるため、1枚単位で良くても揃っていないと素人の投稿に見えます。可変にするのは<strong>写真とテキストだけ</strong>と決めて、残りは数値で固定しました。</p>
+      <table class="spec">
+        <thead>
+          <tr><th>項目</th><th>値</th><th>固定する理由</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>アートボード</th><td>1080 × 1080 px</td><td>フィードでの見え方を揃える</td></tr>
+          <tr><th>カード外側の余白</th><td>44 px</td><td>画面端との距離を一定に</td></tr>
+          <tr><th>カード角丸</th><td>56 px</td><td>やわらかさの度合いを統一</td></tr>
+          <tr><th>写真ヘッダー</th><td>236 px</td><td>中面の情報量を一定に保つ</td></tr>
+          <tr><th>見出し／本文</th><td>68 / 30 px</td><td>スマホでの可読性の下限</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：本文が3行になった1枚だけ、フッターがはみ出した</p>
+        <p>中面5枚のうち、求人の話をする1枚だけ本文が3行でした。他の4枚と同じ設定のままでは<strong>アカウント名とページ送りの表示が下に押し出され、カードの外に消えて</strong>いました。</p>
+        <p>本文だけ小さくすると、その1枚が違って見えます。そこで<strong>写真ヘッダーを300pxから236pxに縮め、行間を1.95から1.85に詰める</strong>ことで、5枚とも同じ設定のまま3行が収まるようにしました。1枚のために例外を作るのではなく、<strong>いちばん厳しい1枚に全体を合わせる</strong>ほうが、あとから投稿を増やすときに破綻しません。</p>
+      </div>
+
+      <figure class="work-shot" style="margin-top:36px">
+        <img src="../assets/img/works/oshigoto-6.jpg" alt="中面用の写真ストリップ10種の一覧。ノートPCと手元、夜のデスクライト、タブレット、手帳、観葉植物などが同じトーンで並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+        <figcaption>中面用の横長素材10種。同じ色設計・同じ光の条件で揃えています。</figcaption>
+      </figure>
+
+      <h3>写真素材は生成して揃えた。そのことは隠さない</h3>
+      <p>投稿を続けるとなると、写真は毎回必要になります。フリー素材を1枚ずつ探すとトーンが揃わないため、<strong>色設計・被写界深度・光の条件を固定した指示で生成</strong>し、中面用の横長素材（1920×560）を10種そろえました。</p>
+      <p>指示に必ず入れているのは、くすみピンクとクリームのカラーコード、浅い被写界深度、窓からの自然光の3点です。あわせて<strong>人物は手元だけ</strong>に限定しています。顔を入れるとアカウントの人格が固定されるうえ、生成物は表情が不自然になりやすいためです。画面には文字を出さない指定も入れました。読めない文字列が写り込むと、それだけで作り物に見えます。</p>
+      <p>制作物のページには<strong>生成画像であることを明記</strong>しています。実在の人物・店舗は写っていません。支給素材や撮影データがある案件では、トリミングの設計をそのままに差し替えられる作りにしてあります。</p>
+
+      <h3>テキストを書き換えるだけで、全枚数が書き出される</h3>
+      <p>継続案件を想定すると、1本ごとにレイアウトから組み直していては単価に合いません。そこで<strong>投稿の中身をJSONに書き、コマンド1つで全枚数をPNGに書き出す</strong>仕組みにしました。レイアウトはHTMLとCSSのテンプレート、書き出しはヘッドレスブラウザのスクリーンショットです。</p>
+      <p>JSONに書くのは、見出し・本文・タグ・使う写真のファイル名だけです。改行位置だけは手で決められるようにしてあります。日本語の見出しは自動折り返しに任せると「30分でで／きる」のような切れ方をするためです。</p>
+      <p>この形にしたことで、<strong>配色をくすみピンクに決めたあと、過去に作った投稿8本を1回のコマンドで全部作り直せました</strong>。手作業なら数十枚を開き直すことになります。</p>
+
+      <figure class="work-shot" style="margin-top:36px">
+        <img src="../assets/img/works/oshigoto-4.jpg" alt="広告バナー。左に「“なんとなく不安”は、1日30分で減らせる。」の見出しとボタン、右にカフェでノートPCを使う手元の写真" width="1200" height="750" loading="lazy" decoding="async">
+        <figcaption>広告バナー 1200×628。横長では白いカードを外しています。</figcaption>
+      </figure>
+
+      <h3>横長は、同じ見た目を持ち込むと成立しない</h3>
+      <p>フィード用の正方形は「写真＋白いカード」ですが、横長のバナーで同じことをすると写真がほとんど残りません。横長では<strong>カードを外し、写真の空いている側から白のグラデーションをかけて文字を読ませて</strong>います。</p>
+      <p>そのために、素材の段階で<strong>被写体を右に寄せ、左半分を意図的に空けた写真</strong>を1枚生成しておきました。レイアウトの都合を先に決めてから素材を用意すると、コピーの分量が増減しても破綻しません。</p>
+
+      <h3>納品の形を3つ用意した</h3>
+      <p>受け取る側の運用体制が分からないので、3つの形で渡せるようにしました。<strong>PNG一式</strong>はそのまま入稿する場合。<strong>Canvaテンプレート</strong>は、先方が自分で文字を差し替える場合（表紙・中面の2ページを作成し、写真素材もアップロード済みにしてあります）。<strong>書き出し環境</strong>は、こちらで継続的に量産する場合です。</p>
+      <p>Canva版だけは、見出しの書体がCanva既定のものになります。APIからフォントを指定できないためで、<strong>編集画面で「Zen Maru Gothic」を選び直せば同じ見た目になる</strong>ことを申し送りに書いています。できないことを黙って渡すと、あとで「違うものが届いた」になります。</p>
+
+      <h3>実運用に足りていないもの</h3>
+      <p>お見せするために作ったものなので、実際に運用するなら足りない部分があります。まず、<strong>投稿画像しかありません</strong>。実際にはキャプション本文、ハッシュタグの設計、投稿時間の設計までが1セットです。</p>
+      <p>次に、<strong>数字による検証をしていません</strong>。「保存されやすい」と言えるのは設計の意図までで、実際の保存率やリーチは投稿してみないと分かりません。運用するなら、表紙のパターンを2種類出して数字を比べるところから始めます。</p>
+      <p>また、生成した写真は<strong>ブランドの実物を写せません</strong>。商品やスタッフを見せる必要があるアカウントでは撮影が前提になります。今回の作りは、あくまで実物を出さないタイプの情報アカウント向けです。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="kotoha-next.html">次の実績：コトハ不動産 &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
