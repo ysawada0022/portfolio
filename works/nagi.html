@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nagi -凪-｜制作実績 — Youhei</title>
+<meta name="description" content="ゆらぎ肌のための美容液を1品だけ売るD2C型ランディングページ。8つの質問から肌の傾向を5指標で数値にして図に表し、その人の肌に合わせた使い方を返す肌診断を実装しました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">化粧品（スキンケア）／ D2C型ランディングページ</p>
+    <h1 class="work-head__title">nagi -凪-</h1>
+    <p class="work-head__lead">
+      季節や体調で肌が揺れる人に向けた、美容液1品の通販ページです。
+      「あなたに合います」と言い切るのではなく、<strong>8つの質問から肌の傾向を数値にして図に表し、その人の肌での使い方を返す</strong>ところまでを主題にして作りました。
+    </p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://ysawada0022.github.io/nagi-skincare/" target="_blank" rel="noopener">実サイトを見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/nagi-1.jpg" alt="nagiのファーストビュー。淡い桃色の地に「ゆらがない肌へ。」の見出しが置かれ、右側に琥珀色の美容液が入った透明なガラス瓶と白いスポイトの写真が並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>ファーストビュー。買う前に「測る」導線を主役にしています。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/nagi-2.jpg" alt="肌診断の設問画面。「8つの質問で、肌の傾向を測る」の見出しの下に、白いカードに入った1問目と3つの選択肢、右上に8分の8の進捗表示がある" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>設問は8問。答えた数が常に見えるようにしています。</figcaption>
+    </figure>
+    <figure class="work-shot">
+      <img src="../assets/img/works/nagi-3.jpg" alt="肌診断の結果画面。「ハリが落ちはじめた肌」の見出しの下に5角形のレーダーチャートがあり、右に乾燥78・きめ71・ハリ85・くすみ81・ゆらぎ36の数値と、それぞれに対応した使い方の文章が並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>結果。指標ごとに「あなたの場合はこう使う」を返します。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>化粧品の単品通販／架空のブランドを想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>企画・構成・デザイン・実装・写真の選定・動作確認</td></tr>
+        <tr><th>使用技術</th><td>HTML ／ CSS（BEM設計）／ JavaScript（ライブラリ不使用）／ インラインSVG ／ Node.js（自動確認）</td></tr>
+        <tr><th>規模</th><td>1ページ9セクション ／ 診断8問24択・5指標 ／ 自動確認33項目</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>「あなたに合います」は、誰にも刺さらない</h3>
+      <p>化粧品の通販ページは、たいてい成分の説明と使用者の声が並んでいます。読んだ人は「良さそう」とは思いますが、<strong>自分の肌に合うかどうかは分からない</strong>ままです。肌の悩みは人によって違うのに、ページは全員に同じことを言っています。</p>
+      <p>そこで、買う前に<strong>自分の肌を測る</strong>導線を主役にしました。8つの質問に答えると、乾燥・きめ・ハリ・くすみ・ゆらぎの5つが0〜100の数値になり、図に表れます。そのうえで、数値に応じて使い方を変えて返します。「ゆらぎ」が高い人には、いきなり顔全体に使わず<strong>まず片側の頬だけで3日試す</strong>ように案内する、といった具合です。</p>
+      <p>診断が当たるかどうかより、<strong>診断結果がそのまま使い方の指示になっている</strong>ことを重視しました。測って終わりでは、買う理由になりません。</p>
+
+      <h3>設問を足し引きしても、尺度が変わらないようにする</h3>
+      <p>設問ごとに「どの指標に、どれだけ効くか」という重みを持たせています。たとえば「洗顔後につっぱるか」は乾燥に1.0、きめに0.3です。1つの設問が複数の指標に効きます。</p>
+      <p>指標の値は、単純に足すのではなく<strong>効いた設問の重みの合計で割って</strong>出しています。</p>
+      <p><code>指標 = Σ(回答 × 重み) ÷ Σ(重み) × 100</code></p>
+      <p>単純な足し算にすると、設問を1問増やすたびに満点が動き、「70以上なら高い」といった判定基準を毎回引き直すことになります。割っておけば、設問を足しても減らしても0〜100のままです。実際に、いちばん強い回答で全指標がちょうど100になること、いちばん弱い回答でも0〜20に収まることを自動確認で押さえています。</p>
+
+      <h3>レーダーチャートを、画像を使わずに描く</h3>
+      <p>結果の図は5角形のレーダーチャートです。画像として用意すると値のぶんだけ枚数が要るので、5つの頂点を三角関数で計算してSVGで描いています。目盛りは4段、軸線は中心から5本です。</p>
+      <p>値が0でも頂点が中心に潰れて図が読めなくなるため、下限を4%にしてあります。読み上げ環境では図そのものが伝わらないので、<code>&lt;title&gt;</code> と <code>&lt;desc&gt;</code> に「乾燥 78、きめ 71…」と数値を書き出しています。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：軸ラベルの「ゆらぎ」が、枠の外で切れていた</p>
+        <p>軸のラベルは、頂点のさらに外側（半径の1.24倍）に置かないと図と重なります。ところが描画領域の大きさを半径だけを基準に決めていたため、<strong>左端の「ゆらぎ」が枠からはみ出して切れて</strong>いました。</p>
+        <p>ラベルを外に出す以上、必要な幅は半径の3.5倍ほどになります。描画領域を広げて中心をずらし、あわせて<strong>「どのラベルも枠からはみ出さないこと」を自動確認の項目に足しました</strong>。文字の幅は書体で変わるので、目で見て直しただけでは再発します。</p>
+      </div>
+
+      <h3>明るい配色は、そのままでは文字が読めない</h3>
+      <p>一覧の他の実績が暗い配色に寄っていたので、こちらは白と淡い桃色を基調にしています。ただ、淡い色をそのまま文字に使うと白い地の上でコントラストが足りません。実測したところ、<strong>単色の面に載る198要素のうち30件がWCAG AAを下回っていました</strong>。</p>
+      <table class="spec">
+        <thead>
+          <tr><th>箇所</th><th>変更前</th><th>変更後</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>見出しの英字（金）</th><td>2.85</td><td>5.08</td></tr>
+          <tr><th>申し込みボタンの白文字</th><td>2.79</td><td>5.08</td></tr>
+          <tr><th>設問番号</th><td>3.53</td><td>5.19</td></tr>
+        </tbody>
+      </table>
+      <p>ここで分かったのは、<strong>同じ桃色でも、塗りに使うか文字に使うかで必要な濃さが違う</strong>ということでした。白文字を載せる塗りとして十分な色が、明るい地に置く文字としては薄すぎます。そこで色を1つにまとめず、「塗り」「文字」「装飾」の3つに分けました。チャートの線や点は装飾なので淡いままで構いません。最終的に不足は0件です。</p>
+
+      <h3>写真は、実在ブランドが写っていないものだけを使う</h3>
+      <p>架空のブランドなので、他社の製品名が写り込んでいるのは具合が悪いです。化粧品のフリー素材は実在の製品を撮ったものが多く、<strong>候補9点のうち5点がラベルの文字が読めるという理由で脱落しました</strong>。最終的に使ったのは3点で、いずれも有料素材ではないことを配信元の情報で確かめています。</p>
+      <p>あわせて、写真に合わせて文章のほうを直しました。当初ファーストビューの説明文を「乳白色のガラス瓶」と書いていましたが、実際に選んだのは透明なガラスに琥珀色の液が入ったものです。<strong>写真と説明が食い違ったままにしない</strong>ようにしています。</p>
+      <p>なお、このページは<strong>写真に頼らない作りにしてあります</strong>。見せ場のレーダーチャートはSVGで画像を持たず、背景の色味もCSSのグラデーションです。そのぶん写真は3点で足りています。</p>
+
+      <h3>作ったものが動くか、ブラウザを動かして確かめた</h3>
+      <p>採点・図の描画・フォームと、数字と状態が絡む部分が多いので、実際のブラウザを操作して確認するスクリプトを書きました。33項目あり、すべて通っています。</p>
+
+      <table class="spec">
+        <thead>
+          <tr><th>確認した部分</th><th>件数</th><th>確かめていること</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>診断の採点</th><td>5件</td><td>最強の回答で全指標100、最弱でも0〜20、回答を強めると指標が上がること、3段階の切り分け</td></tr>
+          <tr><th>診断の画面</th><td>8件</td><td>8問24択が描かれること、未回答では押せないこと、回答数の表示の追従、結果と助言5件</td></tr>
+          <tr><th>レーダーチャート</th><td>6件</td><td>目盛り4段・軸線5本・頂点5点、軸ラベルが枠からはみ出さないこと、読み上げ用の説明</td></tr>
+          <tr><th>やり直し</th><td>2件</td><td>結果が消えること、回答も消えること</td></tr>
+          <tr><th>よくある質問</th><td>4件</td><td>開閉、押したものだけが開くこと、支援技術向けの属性</td></tr>
+          <tr><th>申し込みフォーム</th><td>2件</td><td>未入力では送信されないこと、入力が揃うと完了表示になること</td></tr>
+          <tr><th>ページ全体</th><td>6件</td><td>ページ内リンクの飛び先、全画像の代替テキストと読み込み、横スクロール（PC・スマホ）、エラーが出ていないこと</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：直っているのに、不具合だと判断しかけた</p>
+        <p>ボタンの配色を確認したとき、直したはずの指定が効いていないように見えました。原因を読み違えたまま、回避用のCSSまで書きました。</p>
+        <p>実際には、<strong>ブラウザのタブが裏に隠れていた</strong>のが原因でした。タブが表に出ていないとブラウザはスタイルの再計算を後回しにするため、直後に読んだ値が古いままだったのです。タブを表に出すと正しい値が返りました。</p>
+        <p>書いた回避用のCSSは、根拠が間違っていたので<strong>残さず消しました</strong>。動いてしまうコードほど、理由が違っていても気づかないまま残ります。確認スクリプトの先頭には、この注意書きを入れてあります。</p>
+      </div>
+
+      <h3>JavaScriptが動かない環境でも、読める状態にする</h3>
+      <p>診断はJavaScriptが前提です。動かない環境では診断のボタンを隠して「この診断にはJavaScriptが必要です」と伝え、かわりに処方と使い方の節へ案内しています。よくある質問は全部開いた状態にするので、閉じたまま読めなくなることはありません。</p>
+
+      <h3>実運用に足りていないもの</h3>
+      <p>お見せするために作ったものなので、実際に売るなら追加が必要です。申し込みフォームは送信処理を持たないデモで、実運用では決済と定期便の管理、次回発送日の変更やスキップの導線が要ります。</p>
+      <p>診断についても、いまは結果がその場限りです。結果を保存して次に来たときに続きから見せられると、定期便の継続率に効くと考えています。</p>
+      <p>また、<strong>化粧品は書ける表現に制限があります</strong>。効能効果の表現が薬機法の範囲を超えないよう、実案件では文言を専門家に確認いただく前提です。このページの「4週間後の変化」もアンケート結果という設定の架空の数値で、効果を示すものではないと明記しています。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="kotoha-next.html">次の実績：コトハ不動産 &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
