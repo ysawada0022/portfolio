@@ -17,7 +17,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -96,12 +96,19 @@
       <p class="section__label">WORKS</p>
       <h2 class="section__title">制作実績</h2>
       <p class="section__lead">
-        すべて架空の店舗・企業を想定した自主制作です。<strong>Webサイト11件は実物を公開しており、その場で触っていただけます。</strong>
-        各ページには「何が難しかったか」「どう解いたか」まで書いています。
+        すべて架空の店舗・企業を想定した自主制作です。<strong>作れるものの種類が分かるよう、5つの分野に分けて並べています。</strong>
+        Webサイト11件は実物を公開しており、その場で触っていただけます。各ページには「何が難しかったか」「どう解いたか」まで書いています。
       </p>
     </div>
 
-    <ul class="works">
+    <div class="works-group">
+      <div class="works-group__head">
+        <span class="works-group__num">01</span>
+        <h3 class="works-group__title">Webアプリケーション</h3>
+        <p class="works-group__note">ログイン・予約・検索など、データベースと状態を扱う画面。表示だけでなく、同時アクセスや二重登録の扱いまで設計しています。</p>
+        <span class="works-group__count">2 works</span>
+      </div>
+      <ul class="works works--lead">
 
       <li class="work">
         <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
@@ -161,6 +168,18 @@
         </div>
       </li>
 
+      </ul>
+    </div>
+
+    <div class="works-group">
+      <div class="works-group__head">
+        <span class="works-group__num">02</span>
+        <h3 class="works-group__title">WordPressテーマ開発</h3>
+        <p class="works-group__note">既製テーマを使わず、テンプレートから書き起こしています。更新する人が迷わない管理画面にすることを重視しました。</p>
+        <span class="works-group__count">2 works</span>
+      </div>
+      <ul class="works">
+
       <li class="work">
         <!-- ▼ 実サイトのURL。画像とボタンの2か所で使っています -->
         <div class="work__inner">
@@ -219,6 +238,18 @@
         </div>
       </li>
 
+      </ul>
+    </div>
+
+    <div class="works-group">
+      <div class="works-group__head">
+        <span class="works-group__num">03</span>
+        <h3 class="works-group__title">コーポレート・店舗サイト</h3>
+        <p class="works-group__note">会社や店の信頼を伝える複数ページ構成。情報の置き場所と、問い合わせまでの導線を整理しています。</p>
+        <span class="works-group__count">2 works</span>
+      </div>
+      <ul class="works">
+
       <li class="work">
         <div class="work__inner">
           <div class="work__media">
@@ -274,6 +305,18 @@
           </div>
         </div>
       </li>
+
+      </ul>
+    </div>
+
+    <div class="works-group">
+      <div class="works-group__head">
+        <span class="works-group__num">04</span>
+        <h3 class="works-group__title">ランディングページ</h3>
+        <p class="works-group__note">1ページで申し込みまで完結させる構成。読ませるだけで終わらせないよう、診断やシミュレーターを組み込んでいます。</p>
+        <span class="works-group__count">5 works</span>
+      </div>
+      <ul class="works">
 
       <li class="work">
         <div class="work__inner">
@@ -415,6 +458,18 @@
         </div>
       </li>
 
+      </ul>
+    </div>
+
+    <div class="works-group">
+      <div class="works-group__head">
+        <span class="works-group__num">05</span>
+        <h3 class="works-group__title">SNSクリエイティブ</h3>
+        <p class="works-group__note">Instagramの投稿と広告バナー。1枚ずつ作るのではなく、量産できるテンプレートとして設計しています。</p>
+        <span class="works-group__count">1 works</span>
+      </div>
+      <ul class="works">
+
       <li class="work">
         <!-- ▼ Webサイトではないため、実サイトへのリンクは持たない -->
         <div class="work__inner">
@@ -438,7 +493,9 @@
         </div>
       </li>
 
-    </ul>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -630,7 +687,7 @@
           いまは、デザインと同じくらい<strong>仕組みの部分</strong>を大事にしています。
         </p>
         <p class="about__text">
-          掲載している8件はすべて自主制作です。実在の会社ではありませんが、
+          掲載している12件はすべて自主制作です。実在の会社ではありませんが、
           「この業種ならこの機能が要るはず」と考えながら、実際に動くところまで作っています。
           不具合を見つけて直した過程も、各ページに正直に書いています。
         </p>

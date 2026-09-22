@@ -2,7 +2,7 @@
 /**
  * Youhei — Web制作ポートフォリオ
  *
- * 白基調＋差し色1つ。実績のサムネイルが主役になるよう、サイト自体は色を抑えています。
+ * 紺基調＋真鍮の差し色。実績のサムネイルが明るいぶん、地色を沈めて面を締めています。
  * 命名はBEM。設計トークンは :root に集約。
  */
 
@@ -10,36 +10,41 @@
    デザイントークン
    ========================================================= */
 :root {
-	--ink: #1b2028;
-	--ink-2: #2c333c;
-	--ink-3: #4d5560;
-	--muted: #7b848f;
+	--ink: #e9eef6;
+	--ink-2: #cbd6e6;
+	--ink-3: #a7b4c8;
+	--muted: #8493a9;
 
-	/* ページ全体の地色。真っ白だと硬く見えるため、ごく淡いブルーグレーを敷く。
-	   カード類（--paper）は白のまま残すことで、面が浮き上がって見やすくなる。 */
-	--bg: #edf1f6;
-	--bg-deep: #e3e9f1;
-	--paper: #ffffff;
-	--paper-2: #f6f8fb;
-	--paper-3: #e8eef5;
-	--line: #dde4ec;
+	/* ページ全体の地色は紺。カード（--paper）はひと段階明るい紺にして、
+	   面が浮き上がって見えるようにしている。実績の画像は明るいので、
+	   地を沈めるほどサムネイルが前に出る。 */
+	--bg: #0e1826;
+	--bg-deep: #0a121e;
+	--paper: #17243a;
+	--paper-2: #1d2c45;
+	--paper-3: #253550;
+	--line: #2a3a54;
 
-	--accent: #0f6ad0;
-	--accent-dark: #0a52a6;
-	--accent-soft: #c3ddf8;
-	--accent-wash: #f2f8ff;
+	/* 差し色は真鍮。紺に対して彩度を上げると軽く見えるため、くすませた金にしている。
+	   金の面に載せる文字色は --on-accent（白だとコントラストが足りない）。 */
+	--accent: #c6a15b;
+	--accent-dark: #b08d46;
+	--accent-soft: rgba(198, 161, 91, 0.32);
+	--accent-wash: #1a2438;
+	--on-accent: #121b29;
 
 	--font-en: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
 	--font-jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+	--font-serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 
 	--radius-s: 8px;
 	--radius-m: 14px;
 	--radius-l: 22px;
 	--radius-pill: 999px;
 
-	--shadow-s: 0 2px 10px rgba(27, 32, 40, 0.05);
-	--shadow-m: 0 10px 32px rgba(27, 32, 40, 0.09);
-	--shadow-l: 0 22px 56px rgba(27, 32, 40, 0.13);
+	--shadow-s: 0 2px 10px rgba(0, 0, 0, 0.30);
+	--shadow-m: 0 12px 34px rgba(0, 0, 0, 0.42);
+	--shadow-l: 0 24px 60px rgba(0, 0, 0, 0.50);
 
 	--header-h: 72px;
 	--container: 1180px;
@@ -86,6 +91,19 @@ h1, h2, h3, h4 {
 	line-height: 1.4;
 	font-weight: 700;
 	letter-spacing: 0.01em;
+}
+
+/* 見出しだけ明朝。紺地にゴシックの太字を置くと重くなるため、
+   線の細い明朝で締める。本文はゴシックのまま読みやすさを優先。 */
+.hero__title,
+.section__title,
+.work__title,
+.work-head__title,
+.header__logo,
+.footer__logo {
+	font-family: var(--font-serif);
+	font-weight: 600;
+	letter-spacing: 0.04em;
 }
 
 p, ul, ol, dl, dd, figure {
@@ -201,13 +219,13 @@ button {
 .btn--primary {
 	background-color: var(--accent);
 	border-color: var(--accent);
-	color: #fff;
+	color: var(--on-accent);
 }
 
 .btn--primary:hover {
 	background-color: var(--accent-dark);
 	border-color: var(--accent-dark);
-	color: #fff;
+	color: var(--on-accent);
 }
 
 /* 明るい背景の上に置く控えめなボタン */
@@ -235,7 +253,7 @@ button {
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background-color: rgba(255, 255, 255, 0.92);
+	background-color: rgba(10, 18, 30, 0.88);
 	backdrop-filter: blur(10px);
 	border-bottom: 1px solid var(--line);
 }
@@ -287,7 +305,7 @@ button {
 
 .nav__link--cta:hover {
 	background-color: var(--accent);
-	color: #fff;
+	color: var(--on-accent);
 }
 
 .header__toggle {
@@ -337,7 +355,7 @@ button {
 	position: relative;
 	padding-block: clamp(72px, 12vw, 132px);
 	background-color: var(--bg);
-	background-image: linear-gradient(180deg, #e2ecf8 0%, var(--bg) 68%);
+	background-image: linear-gradient(180deg, #16243a 0%, var(--bg) 68%);
 	overflow: hidden;
 }
 
@@ -346,8 +364,8 @@ button {
 	position: absolute;
 	inset: 0;
 	background-image:
-		linear-gradient(rgba(15, 106, 208, 0.05) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(15, 106, 208, 0.05) 1px, transparent 1px);
+		linear-gradient(rgba(198, 161, 91, 0.07) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(198, 161, 91, 0.07) 1px, transparent 1px);
 	background-size: 64px 64px;
 	mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
 	content: "";
@@ -378,10 +396,10 @@ button {
    背景グラデーションで描いて文字の下・背景の上に確実に入れる。 */
 .hero__accent {
 	background-image: linear-gradient(
-		transparent 58%,
-		var(--accent-soft) 58%,
-		var(--accent-soft) 94%,
-		transparent 94%
+		transparent 62%,
+		var(--accent-soft) 62%,
+		var(--accent-soft) 92%,
+		transparent 92%
 	);
 }
 
@@ -432,15 +450,61 @@ button {
 /* =========================================================
    制作実績
    ========================================================= */
+
+/* 実績は種別ごとにまとめる。1列に12件並べると
+   「何ができる人か」が読み取れないため、見出しで区切っている。 */
+.works-group + .works-group {
+	margin-top: clamp(48px, 6vw, 76px);
+}
+
+.works-group__head {
+	display: flex;
+	align-items: baseline;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-bottom: clamp(18px, 2.4vw, 26px);
+	padding-bottom: 14px;
+	border-bottom: 1px solid var(--line);
+}
+
+.works-group__num {
+	font-family: var(--font-en);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	color: var(--accent);
+}
+
+.works-group__title {
+	font-size: clamp(1.0625rem, 2.2vw, 1.3125rem);
+	letter-spacing: 0.06em;
+}
+
+.works-group__note {
+	margin: 0;
+	flex: 1 1 260px;
+	color: var(--muted);
+	font-size: 0.8125rem;
+	line-height: 1.8;
+}
+
+.works-group__count {
+	font-family: var(--font-en);
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+	color: var(--muted);
+	white-space: nowrap;
+}
+
 .works {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: clamp(24px, 3vw, 38px);
 }
 
-/* 先頭の1件は大きく見せる */
-.work:first-child {
-	grid-column: 1 / -1;
+/* 先頭グループ（Webアプリ）は1列にして、2件とも横長の大きいカードで見せる */
+.works--lead {
+	grid-template-columns: 1fr;
 }
 
 /*
@@ -468,14 +532,14 @@ button {
 	box-shadow: var(--shadow-m);
 }
 
-.work:first-child .work__inner {
+.works--lead .work .work__inner {
 	display: grid;
 	grid-template-columns: 1.25fr 1fr;
 	grid-template-rows: 1fr auto;
 	align-items: stretch;
 }
 
-.work:first-child .work__media {
+.works--lead .work .work__media {
 	grid-row: 1 / 3;
 }
 
@@ -501,8 +565,8 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(15, 106, 208, 0.84);
-	color: #fff;
+	background-color: rgba(10, 17, 28, 0.86);
+	color: var(--accent);
 	font-family: var(--font-jp);
 	font-size: 0.9375rem;
 	font-weight: 700;
@@ -526,7 +590,7 @@ button {
 	transition: transform 0.5s ease;
 }
 
-.work:first-child .work__image {
+.works--lead .work .work__image {
 	height: 100%;
 	aspect-ratio: auto;
 }
@@ -537,7 +601,7 @@ button {
 
 /* デモに繋いでいるカードは、重ねたときの色も区別する */
 .work__media-link[data-label^="デモ"]::after {
-	background-color: rgba(27, 32, 40, 0.84);
+	background-color: rgba(20, 30, 48, 0.88);
 }
 
 .work__badge {
@@ -550,7 +614,7 @@ button {
 	padding: 5px 13px;
 	border-radius: var(--radius-pill);
 	background-color: var(--accent);
-	color: #fff;
+	color: var(--on-accent);
 	font-family: var(--font-en);
 	font-size: 0.6875rem;
 	font-weight: 600;
@@ -566,7 +630,7 @@ button {
 	padding: 26px 26px 18px;
 }
 
-.work:first-child .work__body {
+.works--lead .work .work__body {
 	justify-content: flex-end;
 	padding: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 44px) 16px;
 }
@@ -582,7 +646,7 @@ button {
 	letter-spacing: 0.02em;
 }
 
-.work:first-child .work__title {
+.works--lead .work .work__title {
 	font-size: clamp(1.375rem, 3.2vw, 2rem);
 }
 
@@ -633,7 +697,7 @@ button {
 	padding: 14px 26px 20px;
 }
 
-.work:first-child .work__actions {
+.works--lead .work .work__actions {
 	padding: 0 clamp(28px, 4vw, 44px) clamp(28px, 4vw, 44px);
 }
 
@@ -655,7 +719,7 @@ button {
 
 .work__external:hover {
 	background-color: var(--accent);
-	color: #fff;
+	color: var(--on-accent);
 }
 
 /* 公開先が未定でデモに繋いでいるもの */
@@ -667,7 +731,7 @@ button {
 .work__external--demo:hover {
 	background-color: var(--ink);
 	border-color: var(--ink);
-	color: #fff;
+	color: var(--bg);
 }
 
 .work__external-icon {
@@ -790,7 +854,7 @@ button {
 	height: 32px;
 	border-radius: 50%;
 	background-color: var(--accent);
-	color: #fff;
+	color: var(--on-accent);
 	font-family: var(--font-en);
 	font-size: 0.75rem;
 	font-weight: 700;
@@ -884,7 +948,7 @@ button {
 	padding: 2px 8px;
 	border-radius: var(--radius-s);
 	background-color: var(--accent);
-	color: #fff;
+	color: var(--on-accent);
 	font-size: 0.6875rem;
 	font-weight: 700;
 	line-height: 1.6;
@@ -909,12 +973,12 @@ button {
 }
 
 .form__control::placeholder {
-	color: #a8b0b9;
+	color: var(--muted);
 }
 
 .form__control:focus {
 	border-color: var(--accent);
-	box-shadow: 0 0 0 3px rgba(15, 106, 208, 0.14);
+	box-shadow: 0 0 0 3px rgba(198, 161, 91, 0.22);
 	outline: none;
 }
 
@@ -983,7 +1047,7 @@ button {
 .work-head {
 	padding-block: clamp(48px, 7vw, 84px);
 	background-color: var(--bg);
-	background-image: linear-gradient(180deg, #e2ecf8 0%, var(--bg) 85%);
+	background-image: linear-gradient(180deg, #16243a 0%, var(--bg) 85%);
 	border-bottom: 1px solid var(--line);
 }
 
@@ -1146,7 +1210,7 @@ button {
 	margin-top: 22px;
 	padding: 22px 24px;
 	background-color: var(--accent-wash);
-	border: 1px solid var(--accent-soft);
+	border: 1px solid rgba(198, 161, 91, 0.38);
 	border-left: 5px solid var(--accent);
 	border-radius: var(--radius-s);
 }
@@ -1255,17 +1319,17 @@ button {
 		text-align: center;
 	}
 
-	.work:first-child .work__inner {
+	.works--lead .work .work__inner {
 		display: flex;
 		flex-direction: column;
 	}
 
-	.work:first-child .work__image {
+	.works--lead .work .work__image {
 		aspect-ratio: 8 / 5;
 		height: auto;
 	}
 
-	.work:first-child .work__body {
+	.works--lead .work .work__body {
 		justify-content: flex-start;
 	}
 
