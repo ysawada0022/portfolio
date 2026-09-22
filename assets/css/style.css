@@ -29,7 +29,7 @@
 	   金の面に載せる文字色は --on-accent（白だとコントラストが足りない）。 */
 	--accent: #c6a15b;
 	--accent-dark: #b08d46;
-	--accent-soft: rgba(198, 161, 91, 0.32);
+	--accent-soft: rgba(198, 161, 91, 0.55);
 	--accent-wash: #1a2438;
 	--on-accent: #121b29;
 
@@ -396,10 +396,10 @@ button {
    背景グラデーションで描いて文字の下・背景の上に確実に入れる。 */
 .hero__accent {
 	background-image: linear-gradient(
-		transparent 62%,
-		var(--accent-soft) 62%,
-		var(--accent-soft) 92%,
-		transparent 92%
+		transparent 74%,
+		var(--accent-soft) 74%,
+		var(--accent-soft) 94%,
+		transparent 94%
 	);
 }
 
