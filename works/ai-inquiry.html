@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>あさなぎ信用組合 事務照会｜制作実績 — Youhei</title>
+<meta name="description" content="架空の信用組合で、営業店からの事務手続きの照会に生成AIが規程の条番号つきで答える想定の、導入支援の納品物一式。AIの回答444件を読んで判定し、誤りを減らしたのは指示文ではなく規程の書き直しだったことを示しました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=3">
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="l-container header__inner">
+    <a class="header__logo" href="../index.html">Youhei<span class="header__logo-dot">.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-nav-toggle>
+      <span class="header__toggle-bar" aria-hidden="true"></span>
+      <span class="u-visually-hidden">メニューを開く</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html#works">制作実績</a></li>
+        <li><a class="nav__link" href="../index.html#skills">できること</a></li>
+        <li><a class="nav__link" href="../index.html#flow">進め方</a></li>
+        <li><a class="nav__link" href="../index.html#about">プロフィール</a></li>
+        <li><a class="nav__link nav__link--cta" href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="work-head">
+  <div class="l-container">
+    <a class="work-head__back" href="../index.html#works">&larr; 制作実績一覧へ</a>
+    <p class="work-head__genre">信用組合（事務部・営業店）／ 生成AIの業務導入</p>
+    <h1 class="work-head__title">あさなぎ信用組合 事務照会</h1>
+    <p class="work-head__lead">
+      営業店の職員が事務手続きに迷うと、事務部に電話で照会します。その照会を生成AIで減らす想定で、導入支援の納品物を一式作りました。
+      AIは社内規程（事務取扱要領）だけを根拠に、条番号つきで回答案を出します。<strong>AIの回答444件をすべて読んで判定し、どこまで任せてよいかを数字で示す</strong>ところまでを主題にしています。
+    </p>
+    <div class="work-head__actions">
+      <a class="btn btn--primary" href="https://ysawada0022.github.io/ai-support-samples/" target="_blank" rel="noopener">納品物を見る（別タブ）</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="l-container">
+
+    <figure class="work-shot">
+      <img src="../assets/img/works/ai-inquiry-1.jpg" alt="紺色の地に、方針・プロンプト一式・操作手順書・結果報告の4つの資料の1ページ目が扇形に並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>納品する資料4点。いちばん読んでいただきたいのは、右端の結果報告です。</figcaption>
+    </figure>
+
+    <div class="work-shots">
+    <figure class="work-shot">
+      <img src="../assets/img/works/ai-inquiry-2.jpg" alt="報告書の「結果の推移」の表。第1版から第5版と採用版について、回答数と○△×の件数が並ぶ" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>指示文の版ごとの判定。第4版・第5版で×が増えています。</figcaption>
+    </figure>
+    <figure class="work-shot">
+      <img src="../assets/img/works/ai-inquiry-3.jpg" alt="報告書の、事務取扱要領の改訂案の表。条ごとに現行の書き方と改訂案が並び、誤りが23%から2%に下がったことが書かれている" width="1200" height="750" loading="lazy" decoding="async">
+      <figcaption>規程の改訂案。書き方を直した2か所で、誤りがほぼ消えました。</figcaption>
+    </figure>
+    </div>
+
+    <table class="spec" style="margin-top:40px">
+      <tbody>
+        <tr><th>種別</th><td>生成AI導入支援の納品物／架空の信用組合を想定した自主制作</td></tr>
+        <tr><th>担当範囲</th><td>対象業務の整理・指示文の作成・動作確認と判定・規程の改訂案・操作手順書・結果報告</td></tr>
+        <tr><th>使用技術</th><td>Claude（claude-sonnet-5）／ Claude Code の CLI（照会の自動入力）／ Node.js ／ Python（Excelの組み立て）</td></tr>
+        <tr><th>規模</th><td>PDF 4点・Excel 1点 ／ 動作確認の照会21件 ／ 指示文5版 ／ 判定した回答444件</td></tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="margin-top:50px">
+      <h3>納品物は、生成AI導入支援の募集が求める4点にそろえた</h3>
+      <p>中小企業への生成AI導入支援の募集には、「対象業務と方針の整理資料」「プロンプトとテンプレート」「操作手順」「実施結果と残課題の報告」の4点を納品物とするものがあります。この見本も、その4点に動作確認の記録（Excel）を加えた構成にしました。</p>
+      <table class="spec">
+        <thead>
+          <tr><th>納品物</th><th>中身</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>対象業務と実施方針</th><td>ヒアリングで分かった現状、対象にする照会としない照会、顧客情報の取扱い、4週間のスケジュール</td></tr>
+          <tr><th>プロンプト一式</th><td>AIに設定する指示文と、各項目を置いた理由、採用しなかった変更。職員が照会を書くときのひな形</td></tr>
+          <tr><th>操作手順書</th><td>営業店の職員向け。使う前に守ること、照会のしかた、困ったときの対応</td></tr>
+          <tr><th>実施結果と残課題の報告</th><td>動作確認の結果、指示文を直した経緯、規程の改訂の提案、残っている課題</td></tr>
+          <tr><th>動作確認記録</th><td>照会21件と判定基準、AIの回答444件すべてと判定・所見</td></tr>
+        </tbody>
+      </table>
+      <p>題材に金融機関の後方事務を選んだのは、<strong>間違えたときの影響が大きい業務</strong>だからです。顧客の本人確認や解約の手続きで、AIがそれらしい誤りを返すと、そのまま窓口で使われてしまいます。「便利になります」だけでは済まない業務で、どう確かめ、どう報告するかを見せたいと考えました。</p>
+
+      <h3>AIには、規程に書いてあることだけを答えさせる</h3>
+      <p>指示文では、答えを規程の中身だけで作ること、根拠の条番号を必ず示すこと、規程に書いていなければ推測せずに事務部への照会を案内することを決めています。回答は【結論】【手順・必要なもの】【注意】【承認・回付】【根拠】の順で、窓口で急いでいる職員が最初の一文で答えを読めるようにしました。</p>
+      <p>相続の個別判断や、前例を理由にした例外扱いのように、判断が要る照会には答えさせません。規程の定めだけを示し、判断は役席や担当部署に任せるよう案内させています。照会に顧客の氏名や口座番号が混ざったときは、回答の冒頭で警告を出します。</p>
+
+      <h3>同じ照会でも、回によって答えが変わる</h3>
+      <p>照会は21件用意しました。規程に書いてあるもの、2つ以上の条を組み合わせるもの、書いていないもの、判断を求めるもの、個人情報が混ざったものの5種類です。照会ごとに期待する回答を決めてから入力し、<strong>回答はスクリプトの自動判定に頼らず、すべて読んで○△×を付けました</strong>。自動判定は条番号や語句の有無しか見られません。第1版では、自動判定で不合格になった2件はどちらも判定基準の漏れで、合格した回答のうち5件に直すべき点がありました。</p>
+      <p>第2版で、第1版にはなかった誤りが出ました。キャッシュカードの紛失に、届出印を紛失したときだけの「本人確認書類2点」を当てはめた回答です。同じ照会でも回によって答えが変わるなら、1回ずつ試しても指示文の良し悪しは分かりません。そこで第3版からは各照会を3回ずつ、誤りの出た照会は10回ずつ入力して比べています。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：「改善」した指示文で、誤りが増えた</p>
+        <p>第3版の回答には、個人情報を含まない照会にも「個人情報は含まれていません」と書く癖が残っていました。第4版と第5版では、これを消すために書き出しの指示を変えました。</p>
+        <p>ところが、誤りの出やすい照会を10回ずつ入力すると、×は第3版の5回に対して<strong>第4版で7回、第5版で12回</strong>に増えました。ある照会の誤りは、関係する条文を一切変えていないのに10回中1〜6回の幅で揺れています。言い回しの小さな差は、回ごとのばらつきに埋もれて見分けられません。</p>
+        <p>効果を確かめられなかった変更は採らず、第3版を採用しました。試した版はすべて残し、なぜ採らなかったかも報告書に書いています。</p>
+      </div>
+
+      <h3>誤りを減らしたのは、指示文より規程の書き方だった</h3>
+      <p>繰り返し誤りが出た照会2件を読むと、どちらも規程の書き方に引っかかっていました。全員に当てはまる手順の中に「届出印を紛失したときは2点」が続けて書かれていたこと、氏名変更で通帳をいつ渡すかが書かれていなかったこと、「申出から7営業日後」の「申出」が電話の日とも来店の日とも読めたことです。</p>
+      <p>この3点を直した改訂案を作って同じ照会を入力すると、誤りの割合は<strong>78回中18回（23%）から46回中1回（2%）</strong>に下がりました。報告書では、これを規程の改訂として提案しています。AIが繰り返し読み違えた箇所は、営業店の職員にとっても読み違えやすい箇所です。</p>
+
+      <h3>誤りが0にならないことも、報告に書いた</h3>
+      <p>導入前に決めた成功の判断基準は2つでした。「規程に書いていない照会に、推測で答えない」はどの版でも満たしましたが、「規程に書いてある照会に、誤った回答をしない」は<strong>満たせていません</strong>。採用版でも63回答のうち2回は規程と食い違いました。</p>
+      <p>そのため、職員が根拠の条文を規程で確かめる手順を前提に試行へ進むことを提案し、操作手順書にもその手順を書いています。まだ直せていない誤りと、次に試す手直しの候補も、残課題として報告しています。応答は平均約10秒で、電話がつながるまでの平均25分（ヒアリングでの架空の値）と比べると、待ち時間はほぼなくなります。</p>
+
+      <div class="note">
+        <p class="note__title">つまずいた点：PDFの指示文の欄が、空の枠になっていた</p>
+        <p>資料はMarkdownで書き、PDFに組むときに指示文のテキストファイルを差し込んでいます。公開の準備で紙面を画像にしたところ、<strong>プロンプト一式の、いちばん肝心な指示文の欄が空</strong>でした。</p>
+        <p>原因は改行コードです。Windowsで取り出したMarkdownは改行がCRLFになり、差し込み位置を探す正規表現が当たっていませんでした。改行をそろえてから処理するよう直し、PDFに指示文が入っていることを文字の抽出で確かめています。ページ数だけを見て、中身を読んでいなかったのが見落としの理由です。</p>
+      </div>
+
+      <h3>実際の導入で、確かめ直すこと</h3>
+      <p>組織・規程・ヒアリングの数値はすべて架空で、実在の金融機関の手続きではありません。一方、AIの回答と判定は、実際にAIへ照会を入力して得たものです。</p>
+      <p>実際の導入では、次の点を確かめ直す必要があります。見本の規程は8章の短いもので、実際の規程は分量が多いため、該当する条を取り違えないかを全文で確かめます。動作確認は Claude だけで行ったので、ほかの生成AIを使う場合は同じ照会21件で試し直します。入力した内容が学習に使われない契約になっているかと、会話の記録の保存先は、導入前に情報システム部門と確認する前提です。照会件数がどれだけ減るかは、営業店での2週間の試行で測ります。</p>
+    </div>
+
+    <div class="work-nav">
+      <a class="btn btn--outline" href="../index.html#works">制作実績一覧</a>
+      <a class="btn btn--outline" href="kotoha-next.html">次の実績：コトハ不動産 &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="l-container footer__inner">
+    <p class="footer__logo">Youhei<span class="header__logo-dot">.</span></p>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="../index.html#works">制作実績</a>
+      <a href="../index.html#skills">できること</a>
+      <a href="../index.html#flow">進め方</a>
+      <a href="../index.html#about">プロフィール</a>
+      <a href="../index.html#contact">お問い合わせ</a>
+    </nav>
+    <p class="footer__copy">&copy; 2026 Youhei</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
